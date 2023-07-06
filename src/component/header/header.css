@@ -16,9 +16,13 @@
     padding: 0;
     list-style-type: none;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 .bar {
     background-color: beige;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 .bar .logo{
 
@@ -27,3 +31,21 @@
 .bar .logo img{
     width: 100px;
 }
+.bar .menuBar{
+    display: flex;
+    justify-content: space-between;
+}   
+.bar .menuBar .menu{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    background-color: orangered;
+}    
+.bar .menuBar .appointment{
+    width: 40%;
+    background-color: olivedrab;
+    display: flex;
+    justify-content: right;
+}                            
