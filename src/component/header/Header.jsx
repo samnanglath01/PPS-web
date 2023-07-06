@@ -6,10 +6,10 @@ export default function Header(){
     return(
         <div className="container header">
             <div className="row bar">
-                <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-2 col-2 logo">
+                <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-3 col-3 logo">
                     <img src="Assets/PPS_logo.png" alt="logo" />
                 </div>
-                <div className="col-xxl-10 col-xl-10 col-lg-10 col-md-9 col-sm-10 col-10 menuBar">
+                <div className="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 menuBar">
                     <div className="menu">
                         <span>Accueil</span>
                         <span>Projets</span>
@@ -22,8 +22,8 @@ export default function Header(){
                         </span>
                     </div>
                 </div>
-                <div className="btnMenu">
-
+                <div className="btnMenu col-sm-9 col-9">
+                    <i class="fa-solid fa-bars"></i>
                 </div>
             </div>
         </div>
