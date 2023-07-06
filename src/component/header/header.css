@@ -4,12 +4,11 @@
     top: 15px;
     left: 50%;
     transform: translateX(-50%);
-    padding: 10px 30px;
+    padding: 8px 30px;
     border-radius: 40px;
-    overflow: hidden;
     box-sizing: border-box;
     box-shadow: 0 0 15px rgb(200,200,200);
-    
+    z-index: 1000;
 }
 *{
     margin: 0;
@@ -20,8 +19,9 @@
 }
 .bar {
     display: flex;
-    flex-direction: row;
     align-items: center;
+    position: relative;
+    
 }
 .bar .logo{
 
@@ -52,6 +52,7 @@
     width: 40%;
     display: flex;
     justify-content: right;
+    height: max-content;
 }
 .bar .menuBar .appointment span{
     cursor: pointer;
@@ -63,17 +64,76 @@
     font-family: DM Sans;
     flex-direction: row;
     gap: 5px;
+    height: max-content;
+}
+.bar .menuBar .appointment span i{
+    
+    border-radius: 50%;
+    background-color: blue;
+    color: white;
+    font-size: 10px;
+    padding: 6px;
+    border: 0.5px solid gray;
 }
 .bar .btnMenu{
     font-size: 22px;
     justify-content: right;
     display: none;
+
+}
+.bar .btnMenu i{
+    cursor: pointer;
+}
+
+#show{
+    left: 0;
+    
 }
  @media screen and (max-width:767.98px) {
-    .bar .menuBar{
-        display: none;
+    .header{
+        top: 10px;
+    }
+    .bar .logo img{
+        width: 90px;
+    }
+    .bar .menuBar {
+        z-index: 2000;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: flex;
+        justify-content: left;
+        flex-direction: column;
+        position: absolute;
+        left: -1000px;
+        top: 150%;
+        background-color: #EBF5FB ;
+        border-radius: 8px;
+        box-shadow: 0 0 12px silver;
+        transition: .3s ease-in;
+        
+    }
+    .bar .menuBar .menu{
+        width: 100%;
+        display: flex;
+        justify-content: left;
+        flex-direction: column;
+        gap: 0;
+        
+    }
+    .bar .menuBar .appointment{
+        width: 100%;
+    }
+    .bar .menuBar .menu span,.bar .menuBar .appointment span{
+        width: 100%;
+        transition: 0.2s ease-in-out;
+        padding: 10px 12px;
+    }
+    .bar .menuBar .menu span:hover,.bar .menuBar .appointment span:hover{
+        background-color: #fff ;
+        transform: scale(1.02);
     }
     .bar .btnMenu{
         display: flex;
     }
+    
  }                            
