@@ -1,0 +1,22 @@
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: antiquewhite;
+}
+.menuBar{
+    margin-top: 15px;
+    background-color: white;
+    width: 95%;
+    margin: auto;
+
+
+}
+.menuBar .logo{
+    background-color: aqua;
+
+} 
+.menuBar .logo img{
+    width: 100px;
+}
