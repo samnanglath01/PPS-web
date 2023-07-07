@@ -1,0 +1,164 @@
+body{
+    padding: 15px;
+    background-color: azure;
+  }
+.section1{
+    margin-top: 70px !important;
+    background-color:white;
+    padding: 70px 18%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 15px;
+    
+} 
+.section1 .contentDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+} 
+.section1 .contentDiv .title{
+    font-size: 38px;
+    font-weight: 700;
+    text-align: center;
+    font-family: Space Grotesk;
+    text-transform: uppercase;
+    color: #035;
+    line-height: 150%;
+}
+.section1 .contentDiv .title span{
+    padding: 0 6px;
+    border-radius: 6px;
+    background-color: #035;
+    color: white;
+    font-size: 38px;
+    font-weight: 600;
+    font-family: Space Grotesk;
+}
+.section1 .contentDiv .description{
+    font-size: 15px;
+    text-align: center;
+    font-weight: 500;
+    color: #035;
+}
+.section1 .btnDiv .btnBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.section1 .btnDiv .btnBox .btn1{
+    padding: 10px 16px;
+    --background:linear-gradient(45deg ,rgb(51, 131, 236),rgb(6, 59, 173));
+    background: #0025FF;
+    border-radius: 8px;
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    font-family: DM Sans;
+    cursor: pointer;
+}
+.section1 .btnDiv .btnBox .btn2{
+    font-size: 17px;
+    font-weight: 500;
+    font-family: DM Sans;
+    color: #035;
+    padding: 6px 0px;
+    border-bottom: 1.5px solid #035;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+}
+
+/* section2 */
+.section2{
+    background-color:rgb(250,250,250);
+    padding: 60px 15%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-bottom: 15px;
+
+    
+} 
+.section2 .contentDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.section2 .contentDiv .title{
+    font-size: 38px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: Space Grotesk;
+    text-align: center;
+    color: #035;
+}
+.section2 .contentDiv .description{
+    font-size: 16px;
+    text-align: center;
+    font-weight: 500;
+    color: #035;
+    font-family: DM Sans;
+}
+.section2 .serviceDiv{
+    --background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    row-gap: 40px;
+}
+
+
+
+
+
+
+
+
+
+/* x-small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) { 
+
+}
+
+/* small devices (landscape phones, less than 768px)*/
+@media screen and (max-width: 767.98px) {
+    .section1{
+        margin-top: 50px !important;
+        padding: 50px 10% !important;
+        gap: 35px;
+        
+    } 
+    .section1 .contentDiv .title{
+        font-size: 34px;
+    }
+}
+
+/* medium devices (tablets, less than 992px)*/
+@media screen and (max-width: 991.98px) {
+    .section1{
+        margin-top: 70px;
+        padding: 60px 12%;
+        gap: 35px;
+        
+    } 
+    .section1 .contentDiv .title{
+        font-size: 36px;
+    }
+    .section1 .btnDiv .btnBox{
+        margin-bottom: 40px
+        
+    }
+    .section2{
+        padding: 60px 12% ;
+    }
+}
+
+@media screen and (max-width:1199.98px) {
+    .section1,.section2{
+        padding: 60px 13% ;
+        
+    } 
+}

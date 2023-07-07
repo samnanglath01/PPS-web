@@ -4,14 +4,15 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './header.css';
 export default function Header(){
     const [showMenu,setShowMenu]=useState(false);
-    const handleShowMenu=()=>{
+    const handleToggle=()=>{
         setShowMenu(!showMenu);
     }
     const handleHideMenu=()=>{
         setShowMenu(false);
     }
     return(
-        <div className="container header">
+        <div className="fixed">
+            <div className="container header">
             <div className="row bar">
                 <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-3 col-3 logo">
                     <img src="Assets/PPS_logo.png" alt="logo" />
@@ -30,9 +31,10 @@ export default function Header(){
                     </div>
                 </div>
                 <div className="btnMenu col-sm-9 col-9">
-                    <i class="fa-solid fa-bars" onClick={handleShowMenu}></i>
+                    <i class="fa-solid fa-bars" onClick={handleToggle}></i>
                 </div>
             </div>
+        </div>
         </div>
     )
 }
