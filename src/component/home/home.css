@@ -1,6 +1,11 @@
 body{
     padding: 15px;
-    background-color: azure;
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
   }
 .section1{
     margin-top: 70px !important;
@@ -104,14 +109,119 @@ body{
     font-family: DM Sans;
 }
 .section2 .serviceDiv{
-    --background-color: aquamarine;
     display: flex;
     justify-content: center;
     row-gap: 40px;
 }
+.section3{
+    margin-bottom: 15px;
+    padding: 60px 15%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color: #fff;
+}
+.section3 .titleDiv{
+    text-align: center;
+}
+.section3 .titleDiv .title{
+    color: #025;
+    text-align: center;
+    font-family: Space Grotesk;
+    font-weight: 700;
+    font-size: 38px;
+    text-transform: uppercase;
+}
+.section3 .partnerDiv{
+    display: flex;
+    row-gap: 25px;
+    
+}
+.section3 .partnerDiv .partner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.section3 .partnerDiv .partner img{
+    --width: 80%;
+    height: 30px;
+}
+.section4{
+    background-color: rgb(245, 245, 245);
+    margin-bottom: 15px;
+    flex-direction: column;
+    padding: 60px 10%;
+    border-radius: 15px;
+    gap: 40px;
 
+}
+.section4 .contentDiv{
+    justify-content: space-between;
+    box-sizing: border-box;
+    row-gap: 30px;
+    
+    
+}
+.section4 .contentDiv .titleDiv{
+    width: 45%;
+    padding: 0;
+    box-sizing: border-box;
+}
+.section4 .contentDiv .titleDiv .title{
+    font-size: 38px;
+    color: #025;
+    font-family: Space Grotesk;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.section4 .contentDiv .desDiv{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    box-sizing: border-box;
+    padding: 0;
+    
+}
+.section4 .contentDiv .desDiv .description{
+    width: 100%;
+    font-size: 16px;
+    font-family: DM Sans;
+    font-weight: 500;
+    color: #035;
+    
+}
+.section4 .contentDiv .desDiv .btn{
+    padding: 8px 16px;
+    background: #0025FF;
+    border-radius: 8px;
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    font-family: DM Sans;
+    cursor: pointer;
+    width: max-content;
+    margin: 0;
+}
 
-
+.section4 .softwareDiv{
+    display: flex;
+    justify-content: center;
+}
+.section4 .btnBox .btnPlus{
+    font-size: 16px;
+    color: #025;
+    font-weight: 500;
+    font-family: DM Sans;
+    width: max-content;
+    padding: 6px 0;
+    border-bottom: 1.5px solid #025;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
 
 
 
@@ -154,11 +264,32 @@ body{
     .section2{
         padding: 60px 12% ;
     }
+    .section3 .titleDiv .title{
+        font-size: 32px;
+    }
+    .section4{
+        padding: 50px 10%;
+    }
+    .section4 .contentDiv .titleDiv{
+        width: 100%;
+        text-align: center;
+    }
+    .section4 .contentDiv .desDiv{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .section4 .contentDiv .titleDiv .title{
+        font-size: 34px;
+    }
+    
 }
 
 @media screen and (max-width:1199.98px) {
-    .section1,.section2{
+    .section1,.section2,.section3{
         padding: 60px 13% ;
         
     } 
+
 }
