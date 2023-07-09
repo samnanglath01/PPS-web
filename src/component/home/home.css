@@ -223,6 +223,46 @@ body{
     cursor: pointer;
 }
 
+.section5{
+    padding: 40px 15%;
+    background-color: aliceblue;
+    margin-bottom: 15px;
+
+}
+.section6{
+    padding: 40px 10%;
+    margin-bottom: 15px;
+    background-color: antiquewhite;
+    border-radius: 15px;
+    flex-direction: column;
+    column-gap: 30px;
+}
+.section6 .contentDiv .content{
+    margin: 0;
+    padding: 0;
+}
+.section6 .contentDiv .content .title{
+    font-size: 38px;
+    text-transform: uppercase;
+    color: #025;
+    font-family: Space Grotesk;
+    font-weight: 700;
+}
+.section6 .contentDiv .content .description{
+    font-size: 16px;
+    color: #025;
+    font-family: DM Sans;
+    font-weight: 500;
+}
+.section6 .contentDiv .btnDiv .btn{
+    font-size: 15px;
+    font-weight: 500;
+    font-family: DM Sans;
+    padding: 10px 16px;
+    background-color: blue;
+    color: white;
+}
+
 
 
 
@@ -282,6 +322,9 @@ body{
     }
     .section4 .contentDiv .titleDiv .title{
         font-size: 34px;
+    }
+    .section5{
+        padding: 40px 10%;
     }
     
 }

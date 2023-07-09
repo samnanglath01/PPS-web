@@ -3,6 +3,7 @@ import './home.css';
 import 'bootstrap/dist/css/bootstrap.css'
 import Service from '../service/Service';
 import Software from '../software/Software';
+import Counter from '../counter/Counter';
 export default function Home(){
     return(
         <>
@@ -117,17 +118,41 @@ export default function Home(){
                     </div>
                 </div>
             </div>
-            <div className="section5 container">
-                <div className="row statistic">
-                    <div className="col-xxl-4 col-xl-4 col-lg-4 co-md-4 col-sm-4 col-4 counter firstCounter">
+            <div className="section5 container-fluid">
+                <div className="row statistic d-flex row-gap-5 justify-content-center">
+                    <div className="col-xxl-4 col-xl-4 col-lg-4 co-md-4 col-sm-5 col-7">
+                        <Counter number="32" text="Projets accomplis" color="red"/>
+                    </div>
+                    <div className="col-xxl-4 col-xl-4 col-lg-4 co-md-4 col-sm-5 col-7">
+                        <Counter number="32" text="Développeurs performants" color="black"/>
+                    </div>
+                    <div className="col-xxl-4 col-xl-4 col-lg-4 co-md-4 col-sm-5 col-7">
+                        <Counter number="32" text="Années d’expérience" color="blue"/>
+                    </div>
+                </div>
+            </div>
+            <div className="section6 container-fluid d-flex ">
+                <div className="row contentDiv d-flex">
+                    <div className="col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 content">
+                        <h1 className="title">
+                            Notre demarche
+                        </h1>
+                        <p className="description">
+                            Nous accompagnons l’activité de nos clients dans toutes les phases de leurs projets et sur l’ensemble du cycle de vie de leurs produits, en France comme à l’international.
+                        </p>
+                    </div>
+                    <div className="text-center p-4 col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 btnDiv">
+                        <div className="btn">
+                            Créons votre logiciel
+                        </div>
+                    </div>
+                </div>
+
+                <div className="row serviceDiv bg-light">
+                    <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 serviceBox">
                         
                     </div>
-                    <div className="col-xxl-4 col-xl-4 col-lg-4 co-md-4 col-sm-4 col-4 counter secondCounter">
-
-                    </div>
-                    <div className="col-xxl-4 col-xl-4 col-lg-4 co-md-4 col-sm-4 col-4 counter secondCounter">
-
-                    </div>
+                    
                 </div>
             </div>
         </>
