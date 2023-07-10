@@ -1,4 +1,4 @@
-body{
+.body{
     padding: 15px;
   }
   *{
@@ -8,6 +8,7 @@ body{
     list-style-type: none;
   }
 .section1{
+
     margin-top: 70px !important;
     background-color:white;
     padding: 70px 18%;
@@ -225,17 +226,17 @@ body{
 
 .section5{
     padding: 40px 15%;
-    background-color: aliceblue;
     margin-bottom: 15px;
 
 }
 .section6{
-    padding: 40px 10%;
+    padding: 50px 10%;
     margin-bottom: 15px;
-    background-color: antiquewhite;
+    background-color: rgb(250,250,250);
     border-radius: 15px;
     flex-direction: column;
-    column-gap: 30px;
+    row-gap: 30px;
+    box-sizing: border-box;
 }
 .section6 .contentDiv .content{
     margin: 0;
@@ -262,15 +263,169 @@ body{
     background-color: blue;
     color: white;
 }
+.section6 .serviceDiv{
+    border: 1px solid #025;
+}
+.section6 .serviceDiv .serviceBox{
+    border: 1px solid #025;
+}
 
+.section7{
+    padding: 60px 15%;
+    margin-bottom: 15px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 40px;
+}
+.section7 .titleDiv .title{
+    color: #025;
+    font-size: 38px;
+    font-family: Space Grotesk;
+    font-weight: 700;
+}
+.section7 .contentDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.section7 .contentDiv .imgDiv{
+    align-items: baseline;
+    column-gap: 10%;
+}
+.section7 .contentDiv .imgDiv .img{
+    width: 16%;
+    opacity: 0.5;
+}
+.section7 .contentDiv .imgDiv .img.active{
+    width: 25%;
+    opacity: 1;
+}
+.section7 .contentDiv .imgDiv .img.hidden{
+    display: none;
+}
+.section7 .contentDiv .staff{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.section7 .contentDiv .staff .name{
+    font-size: 26px;
+    color: #025;
+    font-weight: 600;
+    text-align: center;
+    font-family: Space Grotesk;
+}
+.section7 .contentDiv .staff .position{
+    font-size: 16px;
+    color: #025;
+    font-weight: 500;
+    text-align: center;
+    font-family: DM Sans;
+}
 
+.section7 .contentDiv .pagination{
+    background-color: aliceblue;
+    height: max-content;
+    border-radius: 30px;
+    align-items: center;
+}
+.section7 .contentDiv .pagination img{
+    cursor: pointer;
+    width: 40px;
+}
+.section7 .contentDiv .pagination .rule{
+    height: 3px;
+    background-color: rgba(198, 198, 198, 0.473);
+    border-radius: 5px;
+    width: 65%;
+    display: flex;
+}
+.section7 .contentDiv .pagination .rule .r{
+    flex: 1;
+    height: 100%;
+}
+.section7 .contentDiv .pagination .rule .r.active{
+    background-color: #0025FF;
+}
+.section7 .btnDiv .button{
+    padding: 10px 0;
+    font-size: 17px;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: DM Sans;
+    color: #025;
+    border-bottom: 1.5px solid #025;
+}
 
+.section8{
+    width: 80%;
+    margin: 50px auto;
+    padding: 50px 10% 80px 10%;
+    background-color: rgb(250,250,250);
+    flex-direction: column;
+    align-items: center;
+}
+.section8 .titleDiv .title{
+    font-size:32px;
+    font-weight: 600;
+    font-family: Space Grotesk;
+    color: #025;
+}
+.section8 .desDiv .description{
+    font-size:16px;
+    font-weight: 500;
+    font-family: DM Sans;
+    color: #025;
+}
+.section8 .emailDiv{
+    align-items: center;
+    position: relative;
+    align-items: center;
+}
+.section8 .emailDiv .emailBox i{
+    width: 5%;
+    height: 100%;
+
+}
+.section8 .emailDiv .emailBox{
+    box-sizing: border-box;
+    box-shadow: 0 0 5px rgba(192, 192, 192, 0.669);
+    padding: 6px 12px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+.section8 .emailDiv .emailBox .email{
+    width: 95%;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: gray;
+    border: none;
+    outline: none;
+
+}
+.section8 .emailDiv .btnBox .button{
+    padding: 10px 16px;
+    color: white;
+    background-color: blue;
+    font-size: 16px;
+    width: max-content;
+    font-family: DM Sans;
+    font-weight: 500;
+    cursor: pointer;
+}
 
 
 
 /* x-small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) { 
-
+    
 }
 
 /* small devices (landscape phones, less than 768px)*/
@@ -283,6 +438,23 @@ body{
     } 
     .section1 .contentDiv .title{
         font-size: 34px;
+    }
+    .section8 .emailDiv .btnBox{
+        margin-top: 20px;
+    }
+    .section8 .emailDiv .emailBox i{
+        width: 8%;
+    }
+    .section8 .emailDiv .emailBox .email{
+        width: 92%;
+    }
+    .section8{
+        width: 90%;
+        margin: auto;
+        padding: 40px 8% 80px 8%;
+        background-color: rgb(250,250,250);
+        flex-direction: column;
+        align-items: center;
     }
 }
 

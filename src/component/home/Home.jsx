@@ -4,9 +4,10 @@ import 'bootstrap/dist/css/bootstrap.css'
 import Service from '../service/Service';
 import Software from '../software/Software';
 import Counter from '../counter/Counter';
+import MyService from '../myService/MyService';
 export default function Home(){
     return(
-        <>
+        <div className='body'>
             <div className="section1 container-fluid">
                 <div className="contentDiv row">
                     <h1 className="title col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -148,13 +149,93 @@ export default function Home(){
                     </div>
                 </div>
 
-                <div className="row serviceDiv bg-light">
+                <div className="row serviceDiv bg-light d-flex">
                     <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 serviceBox">
-                        
+                        <MyService number="1" title="Meeting" description="An in-depth examination of the topic at hand is essential to ensure that all aspects of the subject are thoroughly explored and understood." icon="./Assets/Connectivity and Help (1).png"/>
                     </div>
-                    
+                    <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 serviceBox">
+                        <MyService number="2" title="Analysis" description="An in-depth examination of the topic at hand is essential to ensure that all aspects of the subject are thoroughly explored and understood." icon="./Assets/Search (1).png"/>
+                    </div>
+                    <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 serviceBox">
+                        <MyService number="3" title="Specification" description="An in-depth examination of the topic at hand is essential to ensure that all aspects of the subject are thoroughly explored and understood." icon="./Assets/Book (1).png"/>
+                    </div>
+                    <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 serviceBox">
+                        <MyService number="4" title="Coding" description="An in-depth examination of the topic at hand is essential to ensure that all aspects of the subject are thoroughly explored and understood." icon="./Assets/Keyboard (1).png"/>
+                    </div>
+                    <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 serviceBox">
+                        <MyService number="5" title="Testing & QA" description="An in-depth examination of the topic at hand is essential to ensure that all aspects of the subject are thoroughly explored and understood." icon="./Assets/True False (1).png"/>
+                    </div>
+                    <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 serviceBox">
+                        <MyService number="6" title="Deployment" description="An in-depth examination of the topic at hand is essential to ensure that all aspects of the subject are thoroughly explored and understood." icon="./Assets/Checked Checkbox (1).png"/>
+                    </div>
                 </div>
             </div>
-        </>
+            <div className="section7 container-fluid d-flex">
+                <div className="row titleDiv">
+                    <h1 className="title text-center text-uppercase">
+                        Notre équipe
+                    </h1>
+                </div>
+                <div className="contentDiv row d-flex row-gap-3 align-item-center">
+                    <div className="imgDiv col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 d-flex justify-content-center">
+                     
+                        <img src="./Assets/staff1.png" alt="" className="img" />
+                        <img src="./Assets/staff1.png" alt="" className="img active" />
+                        <img src="./Assets/staff1.png" alt="" className="img" />
+                        <img src="./Assets/staff1.png" alt="" className="img hidden" />
+                
+                    </div>
+                    <div className="staff d-flex col-xxl-12-col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div className="name">
+                            Jonh
+                        </div>
+                        <p className="position">
+                            chef de project
+                        </p>
+                    </div>
+                    <div className="pagination d-flex justify-content-between align-item-center col-xxl-5 col-xl-5 col-lg-8 col-md-8 col-sm-10 col-10 p-0">
+                        <img src="./Assets/pre.svg" alt="" />
+                        <div className='rule'>
+                            <div className="r"></div>
+                            <div className="r active"></div>
+                            <div className="r"></div>
+                           
+                        </div>
+                        <img src="./Assets/next.svg" alt="" />
+                    </div>
+                </div>
+                <div className="btnDiv row text-center">
+                    <div className="button">
+                        Découvrez notre équipe <i className='fa-solid fa-arrow-right ms-2'></i>
+                    </div>
+                </div>
+            </div>
+            <div className="section8 container-fluid d-flex row-gap-4">
+                <div className="row titleDiv">
+                    <div className="col-12 title text-center">
+                        Commencez l’aventure maintenant
+                    </div>                    
+                </div>
+                <div className="desDiv row">
+                    <div className="col-12 description text-center">
+                        Nous accompagnons l’activité de nos clients dans toutes les phases de leurs projets et sur l’ensemble du cycle de vie de leurs produits
+                    </div>
+                </div>
+                <div className="emailDiv d-flex w-100 row">
+                    <div className="emailBox col-xxl-10 col-xl-10 col-lg-9 col-md-9 col-sm-12 col-12">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" name="" id="" className='email' placeholder='Entrez votre email' />
+                        
+                    </div>
+                    <div className="text-center btnBox col-xxl-2 col-xl-2 col-lg-3 col-md-3 col-sm-12 col-12 d-flex justify-content-center row-gap-3">
+                        <div className="button">
+                            Envoyer
+                        </div>
+                    </div>
+                    <p style={{fontSize:"12px",position:"absolute", left: 0 , top:"110%"}} className="des w-100 mt-0">Inscription instantanée. Aucune carte de crédit n'est requise. <span style={{color:"blue",cursor:"pointer"}}>Conditions d'utilisation</span> et <span style={{color:"blue",cursor:"pointer"}}>politique de confidentialité</span>.</p>
+                </div>
+                
+            </div>
+        </div>
     );
 }

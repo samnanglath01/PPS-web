@@ -1,0 +1,43 @@
+.myService{
+    border: 2px;
+    padding: 0;
+    margin: 0;
+    height: 300px;
+    flex-direction: column;
+    padding: 10px;
+
+}
+.myService .box1{
+    padding: 15px 20px;
+}
+.myService .box1 .icon{
+
+    padding: 10px;
+    border-radius: 50%;
+    background-color: blue;
+    color: white;
+    width: 50px;
+}
+.myService .box1 .number{
+    font-size: 62px;
+    color: #025;
+    font-weight: 500;
+    font-family: Space Grotesk;
+
+}
+.myService .title{
+    color: #001755;
+    font-family: Space Grotesk;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.myService .description{
+    color: #001755;
+    font-family: DM Sans;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
