@@ -1,13 +1,14 @@
 import './footer.css';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect } from 'react';
-export default function Footer(){
+import { useEffect, forwardRef } from 'react';
+
+const Footer = forwardRef(function (props) {
     useEffect(()=>{
         Aos.init({duration:1500});
     },[])
     return(
-        <div data-aos="fade-up" className="d-flex flex-column footer w-100 gap-3">
+        <div data-aos="zoom-in" className="d-flex flex-column footer w-100 gap-3" ref={props.contactSection}>
             <div className="row content w-100">
                 <div data-aos="fade-right" data-aos-delay="100" className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6">
                     <h2 className="title">
@@ -63,4 +64,5 @@ export default function Footer(){
             </div>
         </div>
     )
-}
+})
+export default  Footer;

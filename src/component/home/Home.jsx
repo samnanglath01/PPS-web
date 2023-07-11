@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { forwardRef, useEffect, useState } from 'react';
 import './home.css';
 import 'bootstrap/dist/css/bootstrap.css'
 import Service from '../service/Service';
@@ -7,18 +7,39 @@ import Counter from '../counter/Counter';
 import MyService from '../myService/MyService';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-export default function Home(){
-    useEffect(()=>{
-        Aos.init({duration:2000});
-    },[])
-    return(
+
+const Home = forwardRef(function (props) {
+    useEffect(() => {
+        Aos.init({ duration: 2000 });
+    }, []);
+
+    const [activeIndex, setActiveIndex] = useState(0);
+     const handlePrevious=()=>{
+        activeIndex === 0?
+        setActiveIndex(staff.length-1) : setActiveIndex(activeIndex-1);
+     }
+     const handleNext=()=>{
+        activeIndex === staff.length-1 ? 
+        setActiveIndex(0) : setActiveIndex(activeIndex+1);
+     }
+    
+    const staff=[
+        { name: "Jonh", position: "Project Manager", image: "./Assets/staff1.png" },
+        { name: "Mr Phumra", position: "Supervisor", image: "./Assets/staff2.png" },
+        { name: "Mr Rachna", position: "Tester", image: "./Assets/staff3.png" },
+        { name: "Adam Smith", position: "Software Engineer", image: "./Assets/staff1.png" },
+        { name: "Morgan", position: "Manager", image: "./Assets/staff2.png" },
+        { name: "Jodan", position: "Content Writer", image: "./Assets/staff3.png" }
+    ];
+    
+    return (
         <div className='body'>
-            <div className="section1 container-fluid">
-                <div  className="contentDiv row">
+            <div className="section1 container-fluid" ref={props.welcomeSection}>
+                <div className="contentDiv row">
                     <h1 className="title col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         Des logiciels <span>PUISSANTS</span> conçus pour vous.
                     </h1>
-                    <p data-aos="fade-right"    
+                    <p data-aos="fade-right"
                         className="description col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         Partenaire technologique de grands éditeurs depuis plus de 20 ans, Paris Partners Softwares met tout son savoir-faire à votre service afin de vous donner satisfaction.
                     </p>
@@ -47,17 +68,17 @@ export default function Home(){
                 </div>
                 <div className="serviceDiv row">
                     <div data-aos="flip-left" className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-7 col-8">
-                        <Service  img="Assets/Bullseye.png" color="#035" bgColor="#fff" title="Projet logiciel de A à Z" des="With Third-Party Application Maintenance, we offer you a dedicated contact for the administration of your tool, for maximum responsiveness. We periodically perform the following for you"/>
+                        <Service img="Assets/Bullseye.png" color="#035" bgColor="#fff" title="Projet logiciel de A à Z" des="With Third-Party Application Maintenance, we offer you a dedicated contact for the administration of your tool, for maximum responsiveness. We periodically perform the following for you" />
                     </div>
                     <div data-aos="flip-left" className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-7 col-8">
-                        <Service img="Assets/Laptop.png" color="#fff" bgColor="#0025FF" title="Maintenance et évolution" des="With Third-Party Application Maintenance, we offer you a dedicated contact for the administration of your tool, for maximum responsiveness. We periodically perform the following for you"/>
+                        <Service img="Assets/Laptop.png" color="#fff" bgColor="#0025FF" title="Maintenance et évolution" des="With Third-Party Application Maintenance, we offer you a dedicated contact for the administration of your tool, for maximum responsiveness. We periodically perform the following for you" />
                     </div>
                     <div data-aos="flip-left" className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-7 col-8">
-                        <Service img="Assets/Check Mark Button.png" color="#035" bgColor="#fff" title="Test de fiabilité et sécurité" des="With Third-Party Application Maintenance, we offer you a dedicated contact for the administration of your tool, for maximum responsiveness. We periodically perform the following for you"/>
+                        <Service img="Assets/Check Mark Button.png" color="#035" bgColor="#fff" title="Test de fiabilité et sécurité" des="With Third-Party Application Maintenance, we offer you a dedicated contact for the administration of your tool, for maximum responsiveness. We periodically perform the following for you" />
                     </div>
                 </div>
             </div>
-            <div className="section3 container-fluid">
+            <div className="section3 container-fluid" ref={props.aboutSection}>
                 <div className="titleDiv row">
                     <h1 data-aos="fade-right" data-aos-duration="1000" className="title col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         ENSEMBLE NOUS ÉVOLUONS
@@ -88,11 +109,11 @@ export default function Home(){
                     <div className='col-xxl-2 col-xl-3 col-lg-3 col-md-4 col-sm-5 col-6 partner'>
                         <img src="./Assets/partner (8).png" alt="" />
                     </div>
-                    
-                    
+
+
                 </div>
             </div>
-            <div className="section9 container-fluid">
+            <div className="section9 container-fluid" >
                 <div className="row contentDiv p-0">
                     <div data-aos="fade-right" className="d-flex  content col-xxl-7 col-xl-7 col-lg-7 col-md-12 ">
                         <h1 className="title">
@@ -110,7 +131,7 @@ export default function Home(){
                     </div>
                 </div>
             </div>
-            <div className="section4 container-fluid d-flex">
+            <div className="section4 container-fluid d-flex" ref={props.projectSection}>
                 <div className="row contentDiv d-flex">
                     <div data-aos="fade-right" className="titleDiv">
                         <h1 className="title">
@@ -136,7 +157,7 @@ export default function Home(){
                     <div data-aos="zoom-in-left"
                         data-aos-easing="ease-out-cubic"
                         data-aos-duration="2000" className="col-xxl-6 col-xl-6 col-lg-6 col-md-8 col-sm-10 softwareBox p-4">
-                        <Software img="./Assets/Software_Box2.png" name="#Example2"/>
+                        <Software img="./Assets/Software_Box2.png" name="#Example2" />
                     </div>
                 </div>
                 <div className="row btnBox">
@@ -150,18 +171,18 @@ export default function Home(){
             <div className="section5 container-fluid">
                 <div className="row statistic d-flex row-gap-5 justify-content-center">
                     <div data-aos="fade-right" data-aos-duration="1000" className="col-xxl-4 col-xl-4 col-lg-4 co-md-4 col-sm-5 col-7">
-                        <Counter number="32" text="Projets accomplis" color="red"/>
+                        <Counter number="32" text="Projets accomplis" color="red" />
                     </div>
                     <div data-aos="fade-up" data-aos-duration="1000" className="col-xxl-4 col-xl-4 col-lg-4 co-md-4 col-sm-5 col-7">
-                        <Counter number="32" text="Développeurs performants" color="black"/>
+                        <Counter number="32" text="Développeurs performants" color="black" />
                     </div>
                     <div data-aos="fade-left" data-aos-duration="1000" className="col-xxl-4 col-xl-4 col-lg-4 co-md-4 col-sm-5 col-7">
-                        <Counter number="32" text="Années d’expérience" color="blue"/>
+                        <Counter number="32" text="Années d’expérience" color="blue" />
                     </div>
                 </div>
             </div>
-            <div className="section6 container-fluid d-flex ">
-                <div  className="row contentDiv d-flex">
+            <div className="section6 container-fluid d-flex " ref={props.serviceSection}>
+                <div className="row contentDiv d-flex">
                     <div data-aos="fade-right" className="col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 content">
                         <h1 className="title">
                             Notre demarche
@@ -179,22 +200,22 @@ export default function Home(){
 
                 <div data-aos="fade-up" className="row serviceDiv bg-light d-flex">
                     <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 serviceBox">
-                        <MyService number="1" title="Meeting" description="An in-depth examination of the topic at hand is essential to ensure that all aspects of the subject are thoroughly explored and understood." icon="./Assets/Connectivity and Help (1).png"/>
+                        <MyService number="1" title="Meeting" description="An in-depth examination of the topic at hand is essential to ensure that all aspects of the subject are thoroughly explored and understood." icon="./Assets/Connectivity and Help (1).png" />
                     </div>
                     <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 serviceBox">
-                        <MyService number="2" title="Analysis" description="An in-depth examination of the topic at hand is essential to ensure that all aspects of the subject are thoroughly explored and understood." icon="./Assets/Search (1).png"/>
+                        <MyService number="2" title="Analysis" description="An in-depth examination of the topic at hand is essential to ensure that all aspects of the subject are thoroughly explored and understood." icon="./Assets/Search (1).png" />
                     </div>
                     <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 serviceBox">
-                        <MyService number="3" title="Specification" description="An in-depth examination of the topic at hand is essential to ensure that all aspects of the subject are thoroughly explored and understood." icon="./Assets/Book (1).png"/>
+                        <MyService number="3" title="Specification" description="An in-depth examination of the topic at hand is essential to ensure that all aspects of the subject are thoroughly explored and understood." icon="./Assets/Book (1).png" />
                     </div>
                     <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 serviceBox">
-                        <MyService number="4" title="Coding" description="An in-depth examination of the topic at hand is essential to ensure that all aspects of the subject are thoroughly explored and understood." icon="./Assets/Keyboard (1).png"/>
+                        <MyService number="4" title="Coding" description="An in-depth examination of the topic at hand is essential to ensure that all aspects of the subject are thoroughly explored and understood." icon="./Assets/Keyboard (1).png" />
                     </div>
                     <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 serviceBox">
-                        <MyService number="5" title="Testing & QA" description="An in-depth examination of the topic at hand is essential to ensure that all aspects of the subject are thoroughly explored and understood." icon="./Assets/True False (1).png"/>
+                        <MyService number="5" title="Testing & QA" description="An in-depth examination of the topic at hand is essential to ensure that all aspects of the subject are thoroughly explored and understood." icon="./Assets/True False (1).png" />
                     </div>
                     <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 serviceBox">
-                        <MyService number="6" title="Deployment" description="An in-depth examination of the topic at hand is essential to ensure that all aspects of the subject are thoroughly explored and understood." icon="./Assets/Checked Checkbox (1).png"/>
+                        <MyService number="6" title="Deployment" description="An in-depth examination of the topic at hand is essential to ensure that all aspects of the subject are thoroughly explored and understood." icon="./Assets/Checked Checkbox (1).png" />
                     </div>
                 </div>
             </div>
@@ -206,30 +227,32 @@ export default function Home(){
                 </div>
                 <div className="contentDiv row d-flex row-gap-3 align-item-center">
                     <div className="imgDiv col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 d-flex justify-content-center">
-                     
-                        <img src="./Assets/staff1.png" alt="" className="img" />
-                        <img src="./Assets/staff1.png" alt="" className="img active" />
-                        <img src="./Assets/staff1.png" alt="" className="img" />
-                        <img src="./Assets/staff1.png" alt="" className="img hidden" />
-                
+                        <img src={`${activeIndex === 0 ? staff[staff.length-1].image : staff[activeIndex-1].image}`} alt="" className='img'/>
+                        <img src={staff[activeIndex].image} alt="" className='img active'/>
+                        <img src={`${activeIndex === staff.length-1 ? staff[0].image : staff[activeIndex+1].image}`} alt="" className='img'/>
                     </div>
                     <div className="staff d-flex col-xxl-12-col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div className="name">
-                            Jonh
+                            {staff[activeIndex].name}
                         </div>
                         <p className="position">
-                            chef de project
+                            {staff[activeIndex].position}
                         </p>
                     </div>
                     <div className="pagination d-flex justify-content-between align-item-center col-xxl-5 col-xl-5 col-lg-8 col-md-8 col-sm-10 col-10 p-0">
-                        <img src="./Assets/pre.svg" alt="" />
+                        <img src="./Assets/pre.svg" alt="" onClick={handlePrevious}/>
                         <div className='rule'>
-                            <div className="r"></div>
-                            <div className="r active"></div>
-                            <div className="r"></div>
-                           
+                            {
+
+                                staff.map((st, index) => {
+                                    return (
+                                        <div className={`r ${index === activeIndex ? 'active' : ''}`}></div>
+                                    );
+                                })
+                            }
+
                         </div>
-                        <img src="./Assets/next.svg" alt="" />
+                        <img src="./Assets/next.svg" alt="" onClick={handleNext}/>
                     </div>
                 </div>
                 <div className="btnDiv row text-center">
@@ -242,7 +265,7 @@ export default function Home(){
                 <div className="row titleDiv">
                     <div className="col-12 title text-center">
                         Commencez l’aventure maintenant
-                    </div>                    
+                    </div>
                 </div>
                 <div className="desDiv row">
                     <div className="col-12 description text-center">
@@ -253,18 +276,20 @@ export default function Home(){
                     <div className="emailBox col-xxl-10 col-xl-10 col-lg-9 col-md-9 col-sm-12 col-12">
                         <i class="fa-solid fa-envelope"></i>
                         <input type="email" name="" id="" className='email' placeholder='Entrez votre email' />
-                        
+
                     </div>
                     <div className="text-center btnBox col-xxl-2 col-xl-2 col-lg-3 col-md-3 col-sm-12 col-12 d-flex justify-content-center row-gap-3">
                         <div className="button">
                             Envoyer
                         </div>
                     </div>
-                    <p style={{fontSize:"12px",position:"absolute", left: 0 , top:"110%"}} className="des w-100 mt-0">Inscription instantanée. Aucune carte de crédit n'est requise. <span style={{color:"blue",cursor:"pointer"}}>Conditions d'utilisation</span> et <span style={{color:"blue",cursor:"pointer"}}>politique de confidentialité</span>.</p>
+                    <p style={{ fontSize: "12px", position: "absolute", left: 0, top: "110%" }} className="des w-100 mt-0">Inscription instantanée. Aucune carte de crédit n'est requise. <span style={{ color: "blue", cursor: "pointer" }}>Conditions d'utilisation</span> et <span style={{ color: "blue", cursor: "pointer" }}>politique de confidentialité</span>.</p>
                 </div>
-                
+
             </div>
-            
+
         </div>
     );
-}
+})
+
+export default Home;

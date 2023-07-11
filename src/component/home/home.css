@@ -295,19 +295,21 @@
 }
 .section7 .contentDiv .imgDiv{
     align-items: baseline;
-    column-gap: 10%;
+    column-gap: 15%;
 }
 .section7 .contentDiv .imgDiv .img{
     width: 16%;
+    height: 200px;
     opacity: 0.5;
+    transition: 0.3s ease-out;
 }
 .section7 .contentDiv .imgDiv .img.active{
     width: 25%;
+    height: 300px;
     opacity: 1;
+    transition: 0.3s ease-out;
 }
-.section7 .contentDiv .imgDiv .img.hidden{
-    display: none;
-}
+
 .section7 .contentDiv .staff{
     flex-direction: column;
     align-items: center;
@@ -329,6 +331,7 @@
 }
 
 .section7 .contentDiv .pagination{
+    width: 300px;
     background-color: aliceblue;
     height: max-content;
     border-radius: 30px;
@@ -479,8 +482,15 @@
 
 
 /* x-small devices (portrait phones, less than 576px)*/
-@media (max-width: 575.98px) { 
-    
+@media screen and (max-width: 575.98px) { 
+    .section7 .contentDiv .imgDiv .img{
+        height: 120px !important;
+        width: 20%;
+    }
+    .section7 .contentDiv .imgDiv .img.active{
+        height: 170px !important;
+        width: 30%;
+    }
 }
 
 /* small devices (landscape phones, less than 768px)*/
@@ -522,6 +532,15 @@
     }
     .section9 .contentDiv .content .description{
         font-size: 15px;
+    }
+    .section7{
+        padding: 40px 0% !important;
+    }
+    .section7 .contentDiv .imgDiv .img{
+        height: 120px;
+    }
+    .section7 .contentDiv .imgDiv .img.active{
+        height: 200px;
     }
     
 }
@@ -575,6 +594,14 @@
     .section9 .contentDiv .content .btn{
         font-size: 15px;
         padding: 8px 14px;       
+    }
+    .section7 .contentDiv .imgDiv .img{
+        height: 150px;
+
+    }
+    .section7 .contentDiv .imgDiv .img.active{
+
+        height: 240px;
     }
 }
 
