@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import 'bootstrap/dist/css/bootstrap.css';
 import './header.css';
+import Aos from "aos";
+import 'aos/dist/aos.css'
 export default function Header(){
     const [showMenu,setShowMenu]=useState(false);
+    useEffect(()=>{
+        Aos.init({duration:2000});
+
+    },[])
     const handleToggle=()=>{
         setShowMenu(!showMenu);
     }
@@ -12,7 +18,7 @@ export default function Header(){
     }
     return(
         <div className="fixed">
-            <div className="container header">
+            <div data-aos="zoom-out" data-aos-duration="1000"  className="container header">
             <div className="row bar">
                 <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-3 col-3 logo">
                     <img src="Assets/PPS_logo.png" alt="logo" />

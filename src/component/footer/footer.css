@@ -13,12 +13,14 @@
 .footer .content .menu p{
     font-size: 14px;
     font-weight: 500;
+    width: max-content;
     cursor: pointer;
     font-family: DM Sans;
     color: white;
 }
 .footer .content .menu p:hover{
     color: rgb(165, 165, 165);
+
 }
 .footer .content .phone,.footer .content .email{
     font-size: 14px;
@@ -29,9 +31,43 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    width: max-content;
+    
 }
 .footer .content .phone:hover,.footer .content .email:hover{
     color: silver;
+}
+.footer .bottom{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+}
+.footer .bottom .social{
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.footer .bottom .social a{
+    
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid white;
+    color: white;
+    font-size: 15px;
+
+}
+.footer .bottom p{
+    font-size: 13px;
+    font-weight: 400;
+    font-family: DM Sans;
+
 }
 
 
