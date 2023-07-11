@@ -67,13 +67,13 @@ const Home = forwardRef(function (props) {
                     </div>
                 </div>
                 <div className="serviceDiv row">
-                    <div data-aos="flip-left" className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-7 col-8">
+                    <div data-aos="flip-left" className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-7 col-12">
                         <Service img="Assets/Bullseye.png" color="#035" bgColor="#fff" title="Projet logiciel de A à Z" des="With Third-Party Application Maintenance, we offer you a dedicated contact for the administration of your tool, for maximum responsiveness. We periodically perform the following for you" />
                     </div>
-                    <div data-aos="flip-left" className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-7 col-8">
+                    <div data-aos="flip-left" className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-7 col-12">
                         <Service img="Assets/Laptop.png" color="#fff" bgColor="#0025FF" title="Maintenance et évolution" des="With Third-Party Application Maintenance, we offer you a dedicated contact for the administration of your tool, for maximum responsiveness. We periodically perform the following for you" />
                     </div>
-                    <div data-aos="flip-left" className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-7 col-8">
+                    <div data-aos="flip-left" className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-7 col-12">
                         <Service img="Assets/Check Mark Button.png" color="#035" bgColor="#fff" title="Test de fiabilité et sécurité" des="With Third-Party Application Maintenance, we offer you a dedicated contact for the administration of your tool, for maximum responsiveness. We periodically perform the following for you" />
                     </div>
                 </div>
