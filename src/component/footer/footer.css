@@ -1,4 +1,48 @@
 .footer{
+    width: 100%;
     background-color: #154360;
     padding: 50px 12%;
+}
+.footer .content .title{
+    font-size: 28px;
+    color: white;
+    font-weight: 500;
+    font-family: Space Grotesk;
+    padding: 20px 0;
+}
+.footer .content .menu p{
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: DM Sans;
+    color: white;
+}
+.footer .content .menu p:hover{
+    color: rgb(165, 165, 165);
+}
+.footer .content .phone,.footer .content .email{
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: DM Sans;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.footer .content .phone:hover,.footer .content .email:hover{
+    color: silver;
+}
+
+
+
+
+
+
+
+@media screen and (max-width:767.98px) {
+    .footer .content .title{
+        font-size: 26px;
+
+    }
 }
