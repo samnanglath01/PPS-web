@@ -1,0 +1,17 @@
+.call{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(77, 77, 77);
+    position: fixed;
+    bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 25px;
+    color: white;
+    font-size: 16px;
+    z-index: 2000;
+    cursor: pointer;
+
+}

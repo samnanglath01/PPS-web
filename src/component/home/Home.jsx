@@ -10,7 +10,7 @@ import 'aos/dist/aos.css';
 
 const Home = forwardRef(function (props) {
     useEffect(() => {
-        Aos.init({ duration: 2000 });
+        Aos.init({ duration: 1500 });
     }, []);
 
     const [activeIndex, setActiveIndex] = useState(0);
@@ -34,6 +34,7 @@ const Home = forwardRef(function (props) {
     
     return (
         <div className='body'>
+            
             <div className="section1 container-fluid" ref={props.welcomeSection}>
                 <div className="contentDiv row">
                     <h1 className="title col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
