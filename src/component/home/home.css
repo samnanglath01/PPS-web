@@ -12,15 +12,31 @@
 }
 .home .section1{
 
-    margin-top: 70px !important;
+    margin-top: 60px !important;
     background-color:white;
     padding: 70px 18%;
     display: flex;
     flex-direction: column;
     gap: 40px;
     margin-bottom: 15px;
+    position: relative;
+    
     
 } 
+.home .section1::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url(./../../../public/Assets/background_section1.png);
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: 90%;
+    opacity: 0.6;
+   
+}
 .home .section1 .contentDiv{
     display: flex;
     flex-direction: column;
