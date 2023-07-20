@@ -1,0 +1,66 @@
+.team{
+    margin-top: 60px;
+    flex-direction: column;
+    padding: 60px 15%;
+    background-color: #fff;
+    row-gap: 20px;
+}
+.team .title{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 700;
+    color: #025;
+
+}
+.team .text{
+    display: flex;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 500;
+    color: #025;
+    
+}
+.team .location{
+    display: flex;
+    align-items: center;
+}
+.team .location .country{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+}
+.team .location .country img{
+    width: 100%;
+}
+.team .location .country .name{
+    font-size: 24px;
+    font-weight: 600;
+    color: #025;
+}
+.team .location .country input[type=checkbox]{
+    transform: scale(1.5);
+    border: 1px;
+    outline: none;
+}
+.team .emp{
+    padding: 40px 0;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.team .emp .empDiv{
+    padding: 20px;
+}
+
+
+
+@media screen and (max-width:767.98px) {
+    .team{
+        padding: 50px 10%;
+    }
+    .team .title{
+        font-size: 34px;
+    }
+}

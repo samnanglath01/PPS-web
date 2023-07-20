@@ -1,0 +1,20 @@
+.myButton{
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    height: max-content;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: 2px solid blue;
+    cursor: pointer;
+    color: blue;
+    background-color: white;
+    font-size: 16px;
+
+}
+.active{
+    color: white;
+    background-color: blue;
+}

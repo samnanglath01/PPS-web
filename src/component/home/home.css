@@ -1,17 +1,16 @@
-.body{
+.home{
     padding: 15px;
     scroll-behavior: smooth;
     
   }
-  *{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    list-style-type: none;
     scroll-behavior: smooth;
     
-  }
-.section1{
+}
+.home .section1{
 
     margin-top: 70px !important;
     background-color:white;
@@ -22,12 +21,12 @@
     margin-bottom: 15px;
     
 } 
-.section1 .contentDiv{
+.home .section1 .contentDiv{
     display: flex;
     flex-direction: column;
     gap: 10px;
 } 
-.section1 .contentDiv .title{
+.home .section1 .contentDiv .title{
     font-size: 38px;
     font-weight: 700;
     text-align: center;
@@ -36,7 +35,7 @@
     color: #035;
     line-height: 150%;
 }
-.section1 .contentDiv .title span{
+.home .section1 .contentDiv .title span{
     padding: 0 6px;
     border-radius: 6px;
     background-color: #035;
@@ -45,19 +44,19 @@
     font-weight: 600;
     font-family: Space Grotesk;
 }
-.section1 .contentDiv .description{
+.home .section1 .contentDiv .description{
     font-size: 15px;
     text-align: center;
     font-weight: 500;
     color: #035;
 }
-.section1 .btnDiv .btnBox{
+.home .section1 .btnDiv .btnBox{
     display: flex;
     align-items: center;
     justify-content: center;
     
 }
-.section1 .btnDiv .btnBox .btn1{
+.home .section1 .btnDiv .btnBox .btn1{
     padding: 10px 16px;
     --background:linear-gradient(45deg ,rgb(51, 131, 236),rgb(6, 59, 173));
     background: #0025FF;
@@ -68,7 +67,7 @@
     font-family: DM Sans;
     cursor: pointer;
 }
-.section1 .btnDiv .btnBox .btn2{
+.home .section1 .btnDiv .btnBox .btn2{
     font-size: 17px;
     font-weight: 500;
     font-family: DM Sans;
@@ -83,9 +82,9 @@
 }
 
 /* section2 */
-.section2{
+.home .section2{
     background-color:rgb(250,250,250);
-    padding: 60px 15%;
+    padding: 70px 15%;
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -93,12 +92,12 @@
 
     
 } 
-.section2 .contentDiv{
+.home .section2 .contentDiv{
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.section2 .contentDiv .title{
+.home .section2 .contentDiv .title{
     font-size: 38px;
     font-weight: 700;
     text-transform: uppercase;
@@ -106,19 +105,19 @@
     text-align: center;
     color: #035;
 }
-.section2 .contentDiv .description{
+.home .section2 .contentDiv .description{
     font-size: 16px;
     text-align: center;
     font-weight: 500;
     color: #035;
     font-family: DM Sans;
 }
-.section2 .serviceDiv{
+.home .section2 .serviceDiv{
     display: flex;
     justify-content: center;
     row-gap: 40px;
 }
-.section3{
+.home .section3{
     margin-bottom: 15px;
     padding: 60px 15%;
     display: flex;
@@ -126,10 +125,10 @@
     gap: 40px;
     background-color: #fff;
 }
-.section3 .titleDiv{
+.home .section3 .titleDiv{
     text-align: center;
 }
-.section3 .titleDiv .title{
+.home .section3 .titleDiv .title{
     color: #025;
     text-align: center;
     font-family: Space Grotesk;
@@ -137,50 +136,50 @@
     font-size: 38px;
     text-transform: uppercase;
 }
-.section3 .partnerDiv{
+.home .section3 .partnerDiv{
     display: flex;
     row-gap: 25px;
     
 }
-.section3 .partnerDiv .partner{
+.home .section3 .partnerDiv .partner{
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
 }
-.section3 .partnerDiv .partner img{
+.home .section3 .partnerDiv .partner img{
     --width: 80%;
     height: 30px;
 }
-.section4{
+.home .section4{
     background-color: rgb(245, 245, 245);
     margin-bottom: 15px;
     flex-direction: column;
-    padding: 60px 10%;
+    padding: 70px 10%;
     border-radius: 15px;
-    gap: 40px;
+    gap: 60px;
 
 }
-.section4 .contentDiv{
+.home .section4 .contentDiv{
     justify-content: space-between;
     box-sizing: border-box;
     row-gap: 30px;
     
     
 }
-.section4 .contentDiv .titleDiv{
+.home .section4 .contentDiv .titleDiv{
     width: 45%;
     padding: 0;
     box-sizing: border-box;
 }
-.section4 .contentDiv .titleDiv .title{
+.home .section4 .contentDiv .titleDiv .title{
     font-size: 38px;
     color: #025;
     font-family: Space Grotesk;
     text-transform: uppercase;
     font-weight: 700;
 }
-.section4 .contentDiv .desDiv{
+.home .section4 .contentDiv .desDiv{
     width: 45%;
     display: flex;
     flex-direction: column;
@@ -189,7 +188,7 @@
     padding: 0;
     
 }
-.section4 .contentDiv .desDiv .description{
+.home .section4 .contentDiv .desDiv .description{
     width: 100%;
     font-size: 16px;
     font-family: DM Sans;
@@ -197,7 +196,7 @@
     color: #035;
     
 }
-.section4 .contentDiv .desDiv .btn{
+.home .section4 .contentDiv .desDiv .btn{
     padding: 8px 16px;
     background: #0025FF;
     border-radius: 8px;
@@ -210,11 +209,11 @@
     margin: 0;
 }
 
-.section4 .softwareDiv{
+.home .section4 .softwareDiv{
     display: flex;
     justify-content: center;
 }
-.section4 .btnBox .btnPlus{
+.home .section4 .btnBox .btnPlus{
     font-size: 16px;
     color: #025;
     font-weight: 500;
@@ -228,13 +227,13 @@
     cursor: pointer;
 }
 
-.section5{
+.home .section5{
     padding: 40px 15%;
     margin-bottom: 15px;
 
 }
-.section6{
-    padding: 50px 10%;
+.home .section6{
+    padding: 70px 10%;
     margin-bottom: 15px;
     background-color: rgb(250,250,250);
     border-radius: 15px;
@@ -242,24 +241,24 @@
     row-gap: 30px;
     box-sizing: border-box;
 }
-.section6 .contentDiv .content{
+.home .section6 .contentDiv .content{
     margin: 0;
     padding: 0;
 }
-.section6 .contentDiv .content .title{
+.home .section6 .contentDiv .content .title{
     font-size: 38px;
     text-transform: uppercase;
     color: #025;
     font-family: Space Grotesk;
     font-weight: 700;
 }
-.section6 .contentDiv .content .description{
+.home .section6 .contentDiv .content .description{
     font-size: 16px;
     color: #025;
     font-family: DM Sans;
     font-weight: 500;
 }
-.section6 .contentDiv .btnDiv .btn{
+.home .section6 .contentDiv .btnDiv .btn{
     font-size: 15px;
     font-weight: 500;
     font-family: DM Sans;
@@ -267,14 +266,14 @@
     background-color: blue;
     color: white;
 }
-.section6 .serviceDiv{
+.home .section6 .serviceDiv{
     border: 1px solid #025;
 }
-.section6 .serviceDiv .serviceBox{
+.home .section6 .serviceDiv .serviceBox{
     border: 1px solid #025;
 }
 
-.section7{
+.home .section7{
     padding: 60px 15%;
     margin-bottom: 15px;
     flex-direction: column;
@@ -282,48 +281,49 @@
     justify-content: center;
     row-gap: 40px;
 }
-.section7 .titleDiv .title{
+.home .section7 .titleDiv .title{
     color: #025;
     font-size: 38px;
     font-family: Space Grotesk;
     font-weight: 700;
 }
-.section7 .contentDiv{
+.home .section7 .contentDiv{
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
 }
-.section7 .contentDiv .imgDiv{
+.home .section7 .contentDiv .imgDiv{
     align-items: baseline;
     column-gap: 15%;
 }
-.section7 .contentDiv .imgDiv .img{
+.home .section7 .contentDiv .imgDiv .img{
     width: 16%;
     height: 200px;
     opacity: 0.5;
     transition: 0.3s ease-out;
 }
-.section7 .contentDiv .imgDiv .img.active{
+.home .section7 .contentDiv .imgDiv .img.active{
     width: 25%;
     height: 300px;
     opacity: 1;
     transition: 0.3s ease-out;
+    background:none;
 }
 
-.section7 .contentDiv .staff{
+.home .section7 .contentDiv .staff{
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.section7 .contentDiv .staff .name{
+.home .section7 .contentDiv .staff .name{
     font-size: 26px;
     color: #025;
     font-weight: 600;
     text-align: center;
     font-family: Space Grotesk;
 }
-.section7 .contentDiv .staff .position{
+.home .section7 .contentDiv .staff .position{
     font-size: 16px;
     color: #025;
     font-weight: 500;
@@ -331,32 +331,32 @@
     font-family: DM Sans;
 }
 
-.section7 .contentDiv .pagination{
+.home .section7 .contentDiv .pagination{
     width: 300px;
     background-color: aliceblue;
     height: max-content;
     border-radius: 30px;
     align-items: center;
 }
-.section7 .contentDiv .pagination img{
+.home .section7 .contentDiv .pagination img{
     cursor: pointer;
     width: 40px;
 }
-.section7 .contentDiv .pagination .rule{
+.home .section7 .contentDiv .pagination .rule{
     height: 3px;
     background-color: rgba(198, 198, 198, 0.473);
     border-radius: 5px;
     width: 65%;
     display: flex;
 }
-.section7 .contentDiv .pagination .rule .r{
+.home .section7 .contentDiv .pagination .rule .r{
     flex: 1;
     height: 100%;
 }
-.section7 .contentDiv .pagination .rule .r.active{
+.home .section7 .contentDiv .pagination .rule .r.active{
     background-color: #0025FF;
 }
-.section7 .btnDiv .button{
+.home .section7 .btnDiv .button{
     padding: 10px 0;
     font-size: 17px;
     cursor: pointer;
@@ -366,7 +366,7 @@
     border-bottom: 1.5px solid #025;
 }
 
-.section8{
+.home .section8{
     width: 80%;
     margin: 50px auto;
     padding: 50px 10% 80px 10%;
@@ -374,29 +374,29 @@
     flex-direction: column;
     align-items: center;
 }
-.section8 .titleDiv .title{
+.home .section8 .titleDiv .title{
     font-size:32px;
     font-weight: 600;
     font-family: Space Grotesk;
     color: #025;
 }
-.section8 .desDiv .description{
+.home .section8 .desDiv .description{
     font-size:16px;
     font-weight: 500;
     font-family: DM Sans;
     color: #025;
 }
-.section8 .emailDiv{
+.home .section8 .emailDiv{
     align-items: center;
     position: relative;
     align-items: center;
 }
-.section8 .emailDiv .emailBox i{
+.home .section8 .emailDiv .emailBox i{
     width: 5%;
     height: 100%;
 
 }
-.section8 .emailDiv .emailBox{
+.home .section8 .emailDiv .emailBox{
     box-sizing: border-box;
     box-shadow: 0 0 5px rgba(192, 192, 192, 0.669);
     padding: 6px 12px;
@@ -407,7 +407,7 @@
     flex-wrap: wrap;
     
 }
-.section8 .emailDiv .emailBox .email{
+.home .section8 .emailDiv .emailBox .email{
     width: 95%;
     padding: 5px 10px;
     font-size: 16px;
@@ -417,7 +417,7 @@
     outline: none;
 
 }
-.section8 .emailDiv .btnBox .button{
+.home .section8 .emailDiv .btnBox .button{
     padding: 10px 16px;
     color: white;
     background-color: blue;
@@ -428,35 +428,36 @@
     cursor: pointer;
 }
 
-.section9{
+.home .section9{
     padding: 40px 12%;
     margin-bottom: 15px;
 }
-.section9 .contentDiv{
+.home .section9 .contentDiv{
     background-color: #0025FF;
     display: flex;
     justify-content: center;
     
 }
-.section9 .contentDiv .content{
+.home .section9 .contentDiv .content{
     flex-direction: column;
     row-gap: 10px;
     padding: 40px 8%;
 }
-.section9 .contentDiv .content .title{
+.home .section9 .contentDiv .content .title{
     font-size: 32px;
     color: white;
     font-family: Space Grotesk;
     font-weight: 600;
     
-}.section9 .contentDiv .content .description{
+}
+.home .section9 .contentDiv .content .description{
 
     font-size: 16px;
     color: white;
     font-family: DM Sans;
     font-weight: 500;  
 }
-.section9 .contentDiv .content .btn{
+.home .section9 .contentDiv .content .btn{
 
     font-size: 16px;
     color: blue;
@@ -468,14 +469,14 @@
     border-radius: 0;
     
 }
-.section9 .contentDiv .imgBox{
+.home .section9 .contentDiv .imgBox{
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 }
-.section9 .contentDiv .imgBox img{
+.home .section9 .contentDiv .imgBox img{
     width: 90%;
 
 }
@@ -484,11 +485,11 @@
 
 /* x-small devices (portrait phones, less than 576px)*/
 @media screen and (max-width: 575.98px) { 
-    .section7 .contentDiv .imgDiv .img{
+    .home .section7 .contentDiv .imgDiv .img{
         height: 120px !important;
         width: 20%;
     }
-    .section7 .contentDiv .imgDiv .img.active{
+    .home .section7 .contentDiv .imgDiv .img.active{
         height: 170px !important;
         width: 30%;
     }
@@ -496,25 +497,25 @@
 
 /* small devices (landscape phones, less than 768px)*/
 @media screen and (max-width: 767.98px) {
-    .section1{
+    .home .section1{
         margin-top: 50px !important;
         padding: 50px 10% !important;
         gap: 35px;
         
     } 
-    .section1 .contentDiv .title{
+    .home .section1 .contentDiv .title{
         font-size: 34px;
     }
-    .section8 .emailDiv .btnBox{
+    .home .section8 .emailDiv .btnBox{
         margin-top: 20px;
     }
-    .section8 .emailDiv .emailBox i{
+    .home .section8 .emailDiv .emailBox i{
         width: 8%;
     }
-    .section8 .emailDiv .emailBox .email{
+    .home .section8 .emailDiv .emailBox .email{
         width: 92%;
     }
-    .section8{
+    .home .section8{
         width: 90%;
         margin: auto;
         padding: 40px 8% 80px 8%;
@@ -522,25 +523,25 @@
         flex-direction: column;
         align-items: center;
     }
-    .section9{
+    .home .section9{
         padding: 35px 8%;
     }
-    .section9 .contentDiv .content {
+    .home .section9 .contentDiv .content {
         padding: 20px 5%;
     }
-    .section9 .contentDiv .content .title{
+    .home .section9 .contentDiv .content .title{
         font-size: 28px;
     }
-    .section9 .contentDiv .content .description{
+    .home .section9 .contentDiv .content .description{
         font-size: 15px;
     }
-    .section7{
+    .home .section7{
         padding: 40px 0% !important;
     }
-    .section7 .contentDiv .imgDiv .img{
+    .home .section7 .contentDiv .imgDiv .img{
         height: 120px;
     }
-    .section7 .contentDiv .imgDiv .img.active{
+    .home .section7 .contentDiv .imgDiv .img.active{
         height: 200px;
     }
     
@@ -548,66 +549,66 @@
 
 /* medium devices (tablets, less than 992px)*/
 @media screen and (max-width: 991.98px) {
-    .section1{
+    .home .section1{
         margin-top: 70px;
         padding: 60px 12%;
         gap: 35px;
         
     } 
-    .section1 .contentDiv .title{
+    .home .section1 .contentDiv .title{
         font-size: 36px;
     }
-    .section1 .btnDiv .btnBox{
+    .home .section1 .btnDiv .btnBox{
         margin-bottom: 40px
         
     }
-    .section2{
+    .home .section2{
         padding: 60px 12% ;
     }
-    .section3 .titleDiv .title{
+    .home .section3 .titleDiv .title{
         font-size: 32px;
     }
-    .section4{
+    .home .section4{
         padding: 50px 10%;
     }
-    .section4 .contentDiv .titleDiv{
+    .home .section4 .contentDiv .titleDiv{
         width: 100%;
         text-align: center;
     }
-    .section4 .contentDiv .desDiv{
+    .home .section4 .contentDiv .desDiv{
         width: 100%;
         justify-content: center;
         align-items: center;
 
     }
-    .section4 .contentDiv .titleDiv .title{
+    .home .section4 .contentDiv .titleDiv .title{
         font-size: 34px;
     }
-    .section5{
+    .home .section5{
         padding: 40px 10%;
     }
-    .section7{
+    .home .section7{
         padding: 50px 10%;
     }
-    .section7 .titleDiv .title{
+    .home .section7 .titleDiv .title{
         font-size: 34px;
     }
-    .section9 .contentDiv .content .btn{
+    .home .section9 .contentDiv .content .btn{
         font-size: 15px;
         padding: 8px 14px;       
     }
-    .section7 .contentDiv .imgDiv .img{
+    .home .section7 .contentDiv .imgDiv .img{
         height: 150px;
 
     }
-    .section7 .contentDiv .imgDiv .img.active{
+    .home .section7 .contentDiv .imgDiv .img.active{
 
         height: 240px;
     }
 }
 
 @media screen and (max-width:1199.98px) {
-    .section1,.section2,.section3{
+    .home .section1,.section2,.section3{
         padding: 60px 13% ;
         
     } 

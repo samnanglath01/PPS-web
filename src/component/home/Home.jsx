@@ -1,10 +1,10 @@
 import React, { forwardRef, useEffect, useState } from 'react';
 import './home.css';
 import 'bootstrap/dist/css/bootstrap.css'
-import Service from '../service/Service';
-import Software from '../software/Software';
-import Counter from '../counter/Counter';
-import MyService from '../myService/MyService';
+import Service from '../other/service/Service';
+import Software from '../other/software/Software';
+import Counter from '../other/counter/Counter';
+import MyService from '../other/myService/MyService';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
@@ -12,6 +12,7 @@ const Home = forwardRef(function (props) {
     useEffect(() => {
         Aos.init({ duration: 1500 });
     }, []);
+    
 
     const [activeIndex, setActiveIndex] = useState(0);
      const handlePrevious=()=>{
@@ -33,9 +34,9 @@ const Home = forwardRef(function (props) {
     ];
     
     return (
-        <div className='body'>
+        <div className='home'>
             
-            <div className="section1 container-fluid" ref={props.welcomeSection}>
+            <div className="section1 container-fluid" ref={props.welcomeSection} id='Accueil'>
                 <div className="contentDiv row">
                     <h1 className="title col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         Des logiciels <span>PUISSANTS</span> conçus pour vous.
@@ -58,7 +59,7 @@ const Home = forwardRef(function (props) {
                     </div>
                 </div>
             </div>
-            <div className="section2 cintainer-fluid">
+            <div className="section2 cintainer-fluid" >
                 <div className="contentDiv row">
                     <h1 data-aos="fade-up" data-aos-duration="1200" className="title col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         Secteurs d'activité
@@ -132,7 +133,7 @@ const Home = forwardRef(function (props) {
                     </div>
                 </div>
             </div>
-            <div className="section4 container-fluid d-flex" ref={props.projectSection}>
+            <div className="section4 container-fluid d-flex" ref={props.projectSection}  id='Project'>
                 <div className="row contentDiv d-flex">
                     <div data-aos="fade-right" className="titleDiv">
                         <h1 className="title">
@@ -182,7 +183,7 @@ const Home = forwardRef(function (props) {
                     </div>
                 </div>
             </div>
-            <div className="section6 container-fluid d-flex " ref={props.serviceSection}>
+            <div className="section6 container-fluid d-flex " ref={props.serviceSection} id='Service'>
                 <div className="row contentDiv d-flex">
                     <div data-aos="fade-right" className="col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 content">
                         <h1 className="title">

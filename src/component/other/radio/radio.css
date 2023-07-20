@@ -1,0 +1,17 @@
+.myRadio{
+    width: max-content;
+    padding: 4px 8px;
+    border: 1px solid #025;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-direction: row;
+    cursor: pointer;
+}
+.myRadio label{
+    font-size: 15px ;
+    font-family: DM Sans;
+    color: #025;
+    font-weight: 600;
+}

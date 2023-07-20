@@ -12,7 +12,7 @@
 .header{
     background-color: #fff;
     padding: 8px 30px;
-    border-radius: 40px;
+    border-radius: 30px;
     box-sizing: border-box;
     box-shadow: 0 0 15px rgb(200,200,200);
     
@@ -46,15 +46,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 25px;
+    gap: 30px;
 } 
-.bar .menuBar .menu span{
+.bar .menuBar .menu .link{
     cursor: pointer;
-    font-size: 15px;
+    font-size: 16px;
     color: #035;
     font-family: DM Sans;
     font-weight: 500;
+    text-decoration: none;
 }   
+.bar .menuBar .menu .link:hover{
+    color: #4464d6;
+}
 .bar .menuBar .appointment{
     width: 40%;
     display: flex;
@@ -83,7 +87,7 @@
     border: 0.5px solid gray;
 }
 .bar .btnMenu{
-    font-size: 22px;
+    font-size: 18px;
     justify-content: right;
     display: none;
 
@@ -99,6 +103,9 @@
  @media screen and (max-width:767.98px) {
     .fixed{
         padding-top: 10px;
+    }
+    .header{
+        border-radius: 20px;
     }
     .bar .logo img{
         width: 90px;
@@ -130,12 +137,12 @@
     .bar .menuBar .appointment{
         width: 100%;
     }
-    .bar .menuBar .menu span,.bar .menuBar .appointment span{
+    .bar .menuBar .menu .link,.bar .menuBar .appointment span{
         width: 100%;
         transition: 0.2s ease-in-out;
         padding: 10px 12px;
     }
-    .bar .menuBar .menu span:hover,.bar .menuBar .appointment span:hover{
+    .bar .menuBar .menu link:hover,.bar .menuBar .appointment span:hover{
         background-color: #fff ;
         transform: scale(1.02);
     }

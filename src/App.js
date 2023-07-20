@@ -3,7 +3,11 @@ import './App.css';
 import Footer from './component/footer/Footer';
 import Header from './component/header/Header';
 import Home from './component/home/Home';
-import Call from './component/call/Call';
+import Call from './component/other/call/Call';
+import {BrowserRouter,Routes,Route} from 'react-router-dom';
+import Contact from './component/contact/Contact';
+import Project from './component/project/Project';
+import Team from './component/team/Team';
 
 function App() {
   const aboutSection = useRef(null);
@@ -13,12 +17,19 @@ function App() {
   const contactSection=useRef(null);
 
   return (
-    <>
-      <Header aboutSection={aboutSection} serviceSection={serviceSection} projectSection={projectSection} welcomeSection={welcomeSection} contactSection={contactSection}/>
-      <Home aboutSection={aboutSection} serviceSection={serviceSection} projectSection={projectSection} welcomeSection={welcomeSection}/>
+    <BrowserRouter>
+      <Header aboutSection={aboutSection} serviceSection={serviceSection} projectSection={projectSection} welcomeSection={welcomeSection}/>
+        <Routes> 
+            <Route index element={<Home />}/>
+            <Route path='project' element={<Project/>}/>
+            
+            <Route path='service' element/> 
+            <Route path='team' element={<Team/>}/> 
+            <Route path='contact' element={<Contact/>}/>
+        </Routes>
+        <Call/>
       <Footer contactSection={contactSection}/>
-      <Call/>
-    </>
+    </BrowserRouter>
   );
 }
 

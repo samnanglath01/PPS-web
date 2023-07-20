@@ -1,0 +1,26 @@
+.employee{
+    background: #F5F5F7;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+}
+.employee img{
+    height: 180px;
+}
+.employee .name{
+    font-size: 18px;
+    font-weight: 600;
+    color: #025;
+    padding: 0;
+    margin: 0;
+}
+.employee .pos{
+    font-size: 14px;
+    font-weight: 400;
+    color: #025;
+    margin-top: 5px;
+}
