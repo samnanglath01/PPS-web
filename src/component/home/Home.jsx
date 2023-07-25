@@ -16,7 +16,7 @@ const Home = forwardRef(function (props) {
     }
     useEffect(() => {
         Aos.init({ duration: 1500 });
-        window.setInterval(next,4000);
+        window.setInterval(next,5000);
     }, []);
     const [activeIndex, setActiveIndex] = useState(0);
      const handlePrevious=()=>{
