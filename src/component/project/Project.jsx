@@ -7,10 +7,12 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 export default function Project(){
     useEffect(() => {
-        Aos.init({ duration: 1000 });
+        Aos.init({ duration: 1500 });
     }, []);
 
     const [active,setActive]=useState(0);
+
+    
     return(
         <div className="project ">
             <div className="section1 container-fluid  d-flex flex-direction-column row-gap-3">
@@ -71,7 +73,7 @@ export default function Project(){
                     <div className="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-8 col-12 featureBox p-3">
                         <Feature/>
                     </div>
-                    <div className="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-8 col-12featureBox p-3">
+                    <div className="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-8 col-12 featureBox p-3">
                         <Feature/>
                     </div>
                     <div className="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-8 col-12 featureBox p-3">
@@ -142,15 +144,15 @@ export default function Project(){
                     <h1 className="title col-12 text-center text-uppercase">
                         SOLUTIONS
                     </h1>
-                    <p className="description col-12 w-75 text-center">
+                    <p data-aos="fade-right" className="description col-12 w-75 text-center">
                         Notre tâche consistait à concevoir une nouvelle version du logiciel. Nous avons revu sa structure et créé un nouveau style visuel et de nouveaux éléments pour son identité.
                     </p>
 
                 </div>
-                <div className="row">
+                <div data-aos="fade-up" className="row">
                     <img src="./Assets/mu1.png" alt="" className='w-100' />
                 </div>
-                <div className="row subImg d-flex">
+                <div data-aos="fade-up" className="row subImg d-flex">
                     <div className="imgDiv col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12">
                         <img src="./Assets/mu2.png" alt=""/>
                     </div>
@@ -161,18 +163,18 @@ export default function Project(){
             </div>
             <div className="section9 container-fluid" >
                 <div className="row contentDiv p-0">
-                    <div data-aos="fade-right" className="d-flex  content col-xxl-7 col-xl-7 col-lg-7 col-md-12 ">
+                    <div data-aos="fade-up" className="d-flex  content col-xxl-7 col-xl-7 col-lg-7 col-md-12 ">
                         <h1 className="title">
                             Exprimez vos idées avec des outils puissants.
                         </h1>
                         <p className="description">
                             We support our customers in all phases of their projects and throughout the entire product lifecycle, both in France and internationally.
                         </p>
-                        <div className="btn">
+                        <div className="button my-button">
                             Créons votre logiciel
                         </div>
                     </div>
-                    <div data-aos="fade-left" className="imgBox col-xxl-5 col-xl-5 col-lg-5 col-md-7 col-sm-8 ">
+                    <div data-aos="fade-up" className="imgBox col-xxl-5 col-xl-5 col-lg-5 col-md-7 col-sm-8 ">
                         <img src="./Assets/image.png" alt="" />
                     </div>
                 </div>

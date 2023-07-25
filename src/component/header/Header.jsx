@@ -1,8 +1,6 @@
-import React, { forwardRef, useEffect, useState } from "react";
+import React, { forwardRef, useState} from "react";
 import 'bootstrap/dist/css/bootstrap.css';
 import './header.css';
-import Aos from "aos";
-import 'aos/dist/aos.css';
 import {Link} from 'react-router-dom';
 
 const Header = forwardRef(function (props) {
@@ -14,47 +12,43 @@ const Header = forwardRef(function (props) {
             
     //     });
     // };
+    const [active, setActive]=useState(1);
+
     const scrollToTop=()=>{
         window.scrollTo(0,0);
     }
-
-    const [showMenu, setShowMenu] = useState(false);
-    useEffect(() => {
-        Aos.init({ duration: 2000 });
-
-    }, [])
-    const handleToggle = () => {
-        setShowMenu(!showMenu);
-    }
-    const handleHideMenu = () => {
-        setShowMenu(false);
-    }
+    const [show,setShow]=useState(false);
     return (
-        <div className="fixed">
-            <div  data-aos-duration="1000" className="container header">
-                <div className="row bar">
-                    <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-3 col-3 logo">
-                        <img src="Assets/PPS_logo.png" alt="logo" />
-                    </div>
-                    <div className="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-12 col-12 menuBar" id={`${showMenu ? 'show' : ''}`}>
-                        <div className="menu">
-                            <Link className="link" onClick={()=>{scrollToTop();handleHideMenu()}} to="/">Accueil</Link>
-                            <Link className="link" onClick={()=>{scrollToTop();handleHideMenu()}} to="/project">Projets</Link>
-                            <Link className="link" onClick={()=>{scrollToTop();handleHideMenu()}} to="/service">Services</Link>
-                            <Link className="link" onClick={()=>{scrollToTop();handleHideMenu()}} to={"/team"}>Équipe</Link>
-                            <Link className="link"  onClick={()=>{scrollToTop();handleHideMenu()}} to="/contact">Contact</Link>
-                            
-                        </div>
-                        {/* <div className="appointment">
-                            <span onClick={handleHideMenu}>
-                                Prendre rendez-vous <i class="fa-solid fa-phone"></i>
-                            </span>
-                        </div> */}
-                    </div>
-                    <div className="btnMenu col-sm-9 col-9">
-                        <i class="fa-solid fa-bars" onClick={handleToggle}></i>
+        <div className="container-fluid header">
+            <div className="row bar">
+                <div className="col-3 btnDiv">
+                    <div className="btn-toggle" onClick={()=>{setShow(!show)}}>
+                        <i className="fa-solid fa-bars"></i>
                     </div>
                 </div>
+                <div className="col-3 text-center logoDiv">
+                    <img onClick={()=>{}} src="./Assets/PPS_logo.png" alt="" className="logo"  />
+                </div>
+                <div className="col-9 menuDiv " id={show? "show" :""}>
+                    <div className="menu">
+                        <Link to={'/'} onClick={()=>{scrollToTop();setShow(!show); setActive(1)}} className={`link ${active === 1 ? 'active': ''}`}>Accueil</Link>
+                        <Link to={'/activity'} onClick={()=>{scrollToTop();setShow(!show); setActive(2)}} className={`link ${active === 2 ? 'active': ''}`}>Activités</Link>
+                        <Link to={'/project'} onClick={()=>{scrollToTop();setShow(!show); setActive(3)}} className={`link ${active === 3 ? 'active': ''}`}>Projets</Link>
+                        <Link to={'/step'} onClick={()=>{scrollToTop();setShow(!show); setActive(4)}} className={`link ${active === 4 ? 'active': ''}`}>Démarche</Link>
+                        <Link to={'/team'} onClick={()=>{scrollToTop();setShow(!show); setActive(5)}} className={`link ${active === 5 ? 'active': ''}`}>Équipe</Link>
+                    </div>
+                    <Link to={'contact'} onClick={()=>{scrollToTop();setShow(!show);setActive(100)}} className="btn-contact my-button">
+                        Contact
+                    </Link>
+                </div>
+                <div className="col-3 phoneDiv">
+                    <Link onClick={()=>{scrollToTop(); setActive(100)}} to={'/contact'} className="btn-phone my-button">
+                        <i className="fa-solid fa-phone"></i>
+                    </Link>
+                </div>
+
+                
+                
             </div>
         </div>
     )

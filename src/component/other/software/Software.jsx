@@ -7,13 +7,13 @@ export default function Software(props){
                 <i className='fa-solid fa-arrow-up'></i>
             </div>
             <div className="btnBox d-flex gap-3">
-                <div className="btn btn1">
+                <div className="button btn1">
                     Client First
                 </div>
-                <div className="btn btn2">
+                <div className="button btn2">
                     Re-Build
                 </div>
-                <div className="btn btn3">
+                <div className="button btn3">
                     Development
                 </div>
             </div>

@@ -9,31 +9,59 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     
+    
 }
+/* mybutton */
+         
+.my-button {
+    --background-image: linear-gradient(to right, #457fca 0%, #5691c8  51%, #457fca  100%);
+    background-image: linear-gradient(to right, #00c6ff 0%, #0072ff  51%, #00c6ff  100%);
+    padding: 8px 14px;
+    font-weight: 500;
+    text-align: center;
+    width: max-content;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 6px;
+    display: block;
+    cursor: pointer;
+  }
+
+  .my-button:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: rgb(245,245,245);
+    text-decoration: none;
+  }
+ 
+
 .home .section1{
 
-    margin-top: 60px !important;
+    margin-top: 50px !important;
     background-color:white;
-    padding: 70px 18%;
+
+    padding: 70px 18% 90px 18%;
     display: flex;
     flex-direction: column;
     gap: 40px;
     margin-bottom: 15px;
-    position: relative;
     
     
 } 
+
+
 .home .section1::before{
     content: "";
     position: absolute;
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
-    bottom: 0;
-    right: 0;
     background-image: url(./../../../public/Assets/background_section1.png);
     background-position: center;
     background-repeat:no-repeat;
-    background-size: 90%;
+    background-size:85% auto;
     opacity: 0.6;
    
 }
@@ -43,59 +71,47 @@
     gap: 10px;
 } 
 .home .section1 .contentDiv .title{
-    font-size: 38px;
+    z-index: 100;
+    font-size: 40px;
     font-weight: 700;
     text-align: center;
     font-family: Space Grotesk;
     text-transform: uppercase;
-    color: #035;
+    color: rgb(2,0,36);
     line-height: 150%;
 }
 .home .section1 .contentDiv .title span{
-    padding: 0 6px;
     border-radius: 6px;
-    background-color: #035;
-    color: white;
-    font-size: 38px;
-    font-weight: 600;
+    font-size: 40px;
     font-family: Space Grotesk;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, #0025FF 0%, #F00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .home .section1 .contentDiv .description{
-    font-size: 15px;
+    font-size: 15.5px;
     text-align: center;
     font-weight: 500;
     color: #035;
+    z-index: 100;
 }
-.home .section1 .btnDiv .btnBox{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
-.home .section1 .btnDiv .btnBox .btn1{
-    padding: 10px 16px;
-    --background:linear-gradient(45deg ,rgb(51, 131, 236),rgb(6, 59, 173));
-    background: #0025FF;
-    border-radius: 8px;
-    color: white;
+.home .section1 .row .button{
     font-size: 17px;
-    font-weight: 500;
-    font-family: DM Sans;
+    font-weight: 600;
     cursor: pointer;
-}
-.home .section1 .btnDiv .btnBox .btn2{
-    font-size: 17px;
-    font-weight: 500;
+    text-decoration: none;
+    color: #025;
     font-family: DM Sans;
-    color: #035;
-    padding: 6px 0px;
-    border-bottom: 1.5px solid #035;
-    cursor: pointer;
+    padding: 6px 0;
+    border-bottom: 1.5px solid #025;
+    width: max-content;
     display: flex;
     align-items: center;
     gap: 5px;
+    z-index: 100;
 
-}
+}           
 
 /* section2 */
 .home .section2{
@@ -105,8 +121,8 @@
     flex-direction: column;
     gap: 50px;
     margin-bottom: 15px;
-
-    
+    border-radius: 4px;
+ 
 } 
 .home .section2 .contentDiv{
     display: flex;
@@ -120,6 +136,11 @@
     font-family: Space Grotesk;
     text-align: center;
     color: #035;
+}
+.home .section2 .contentDiv .title span{
+    background: linear-gradient(90deg, #0025FF 0%, #F00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .home .section2 .contentDiv .description{
     font-size: 16px;
@@ -152,6 +173,11 @@
     font-size: 38px;
     text-transform: uppercase;
 }
+.home .section3 .titleDiv .title span{
+    background: linear-gradient(90deg, #0025FF 0%, #F00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 .home .section3 .partnerDiv{
     display: flex;
     row-gap: 25px;
@@ -174,6 +200,7 @@
     padding: 70px 10%;
     border-radius: 15px;
     gap: 60px;
+    box-sizing: border-box;
 
 }
 .home .section4 .contentDiv{
@@ -195,6 +222,11 @@
     text-transform: uppercase;
     font-weight: 700;
 }
+.home .section4 .contentDiv .titleDiv .title span{
+    background: linear-gradient(90deg, #0025FF 0%, #F00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 .home .section4 .contentDiv .desDiv{
     width: 45%;
     display: flex;
@@ -212,27 +244,23 @@
     color: #035;
     
 }
-.home .section4 .contentDiv .desDiv .btn{
-    padding: 8px 16px;
-    background: #0025FF;
-    border-radius: 8px;
-    color: white;
-    font-size: 17px;
-    font-weight: 500;
+.home .section4 .contentDiv .desDiv .button{
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 16px;
     font-family: DM Sans;
-    cursor: pointer;
-    width: max-content;
-    margin: 0;
+    
 }
 
 .home .section4 .softwareDiv{
     display: flex;
     justify-content: center;
+    box-sizing: border-box;
 }
 .home .section4 .btnBox .btnPlus{
     font-size: 16px;
     color: #025;
-    font-weight: 500;
+    font-weight: 600;
     font-family: DM Sans;
     width: max-content;
     padding: 6px 0;
@@ -240,13 +268,15 @@
     display: flex;
     align-items: center;
     gap: 5px;
+    text-decoration: none;
     cursor: pointer;
 }
 
 .home .section5{
     padding: 40px 15%;
     margin-bottom: 15px;
-
+    box-sizing: border-box;
+    background-color: white;
 }
 .home .section6{
     padding: 70px 10%;
@@ -256,10 +286,12 @@
     flex-direction: column;
     row-gap: 30px;
     box-sizing: border-box;
+    
 }
 .home .section6 .contentDiv .content{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 .home .section6 .contentDiv .content .title{
     font-size: 38px;
@@ -267,26 +299,41 @@
     color: #025;
     font-family: Space Grotesk;
     font-weight: 700;
+    box-sizing: border-box;
+}
+.home .section6 .contentDiv .content .title span{
+    background: linear-gradient(90deg, #0025FF 0%, #F00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .home .section6 .contentDiv .content .description{
     font-size: 16px;
     color: #025;
     font-family: DM Sans;
     font-weight: 500;
+    box-sizing: border-box;
 }
-.home .section6 .contentDiv .btnDiv .btn{
-    font-size: 15px;
-    font-weight: 500;
-    font-family: DM Sans;
-    padding: 10px 16px;
-    background-color: blue;
-    color: white;
+.home .section6 .contentDiv .btnDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.home .section6 .contentDiv .btnDiv .button{
+    font-size: 16px;
+    padding: 10px 14px;
+
+}
+ 
+
+ 
 .home .section6 .serviceDiv{
-    border: 1px solid #025;
+    border: 1px solid rgb(14, 70, 154);
+    box-sizing: border-box;
+    overflow: hidden;
 }
 .home .section6 .serviceDiv .serviceBox{
-    border: 1px solid #025;
+    border: 1px solid rgb(14, 70, 154);
+    box-sizing: border-box;
 }
 
 .home .section7{
@@ -296,12 +343,18 @@
     align-items: center;
     justify-content: center;
     row-gap: 40px;
+    box-sizing: border-box;
 }
 .home .section7 .titleDiv .title{
     color: #025;
     font-size: 38px;
     font-family: Space Grotesk;
     font-weight: 700;
+}
+.home .section7 .titleDiv .title span{
+    background: linear-gradient(90deg, #0025FF 0%, #F00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .home .section7 .contentDiv{
     display: flex;
@@ -370,16 +423,17 @@
     height: 100%;
 }
 .home .section7 .contentDiv .pagination .rule .r.active{
-    background-color: #0025FF;
+    background-image: linear-gradient( 288deg,  rgba(0,85,255,1) 1.5%, rgba(4,56,115,1) 91.6% );
 }
 .home .section7 .btnDiv .button{
     padding: 10px 0;
-    font-size: 17px;
+    font-size: 16px;
     cursor: pointer;
-    font-weight: 500;
+    font-weight: 600;
     font-family: DM Sans;
     color: #025;
     border-bottom: 1.5px solid #025;
+    text-decoration: none;
 }
 
 .home .section8{
@@ -388,6 +442,7 @@
     padding: 50px 10% 80px 10%;
     background-color: rgb(250,250,250);
     flex-direction: column;
+    border-radius: 6px;
     align-items: center;
 }
 .home .section8 .titleDiv .title{
@@ -415,7 +470,7 @@
 .home .section8 .emailDiv .emailBox{
     box-sizing: border-box;
     box-shadow: 0 0 5px rgba(192, 192, 192, 0.669);
-    padding: 6px 12px;
+    padding: 5px 12px;
     background-color: #fff;
     display: flex;
     align-items: center;
@@ -434,22 +489,23 @@
 
 }
 .home .section8 .emailDiv .btnBox .button{
-    padding: 10px 16px;
-    color: white;
-    background-color: blue;
-    font-size: 16px;
+    padding: 8px 14px;
     width: max-content;
     font-family: DM Sans;
     font-weight: 500;
-    cursor: pointer;
+    background-image: linear-gradient(to right, #457fca 0%, #5691c8  51%, #457fca  100%);
 }
 
 .home .section9{
     padding: 40px 12%;
     margin-bottom: 15px;
+    
 }
 .home .section9 .contentDiv{
-    background-color: #0025FF;
+    background: #00c6ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #00c6ff, #0072ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 15px;
     display: flex;
     justify-content: center;
     
@@ -473,17 +529,15 @@
     font-family: DM Sans;
     font-weight: 500;  
 }
-.home .section9 .contentDiv .content .btn{
+.home .section9 .contentDiv .content .button{
 
     font-size: 16px;
-    color: blue;
+    color: white;
     font-family: DM Sans;
     font-weight: 500;
-    background-color: white;
-    padding: 10px 18px;
-    width: max-content;
-    border-radius: 0;
-    
+    background-image: linear-gradient(to right, #005C97 0%, #363795  51%, #005C97  100%);
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.584);
 }
 .home .section9 .contentDiv .imgBox{
     padding: 20px;
@@ -624,9 +678,10 @@
 }
 
 @media screen and (max-width:1199.98px) {
-    .home .section1,.section2,.section3{
+    .home .section1, .home .section2,.home .section3{
         padding: 60px 13% ;
         
     } 
 
 }
+

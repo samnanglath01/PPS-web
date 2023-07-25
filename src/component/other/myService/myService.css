@@ -5,7 +5,7 @@
     height: 300px;
     flex-direction: column;
     padding: 10px;
-
+    cursor: pointer;
 }
 .myService .box1{
     padding: 15px 20px;
@@ -14,7 +14,10 @@
 
     padding: 10px;
     border-radius: 50%;
-    background-color: blue;
+    background: #0052D4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(36deg, #6FB1FC, #4364F7, #0052D4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(36deg, #6FB1FC, #4364F7, #0052D4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
     color: white;
     width: 50px;
 }

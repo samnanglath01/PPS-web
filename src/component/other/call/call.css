@@ -1,17 +1,65 @@
-.call{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: rgb(77, 77, 77);
+.appointment{
     position: fixed;
-    bottom: 25px;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    width: max-content;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 6px;
+    background-color: transparent;
+    background-color: white;
+    box-shadow: 0px 0px 3px rgba(192, 192, 192, 0.3);
+    overflow: hidden;
+    text-decoration: none;
+    transition:.3s;
+    animation: appointment linear 1.5s infinite;
+}
+.appointment .text{
+    color: rgb(30, 83, 163);
+    font-size: 15px;
+    font-weight: 500;
+
+    font-family: DM Sans;
+    
+}
+.appointment i{
+    font-size: 14px;
+    color: white;
+    width: 35px;
+    height: 35px;
+    background: #00c6ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    right: 25px;
-    color: white;
-    font-size: 16px;
-    z-index: 2000;
-    cursor: pointer;
+    border-radius: 50%;
+}
 
+@keyframes appointment {
+    0% {
+    box-shadow:0 0px 3px rgba(192, 192, 192,0.3),0 0 0 0 rgba(192, 192, 192,0.2),0 0 0 0 rgba(192, 192, 192,0.2)
+}
+50% {
+    box-shadow:0 0px 3px rgba(192, 192, 192,0.3),0 0 0 6px rgba(192, 192, 192,0.2),0 0 0 0 rgba(192, 192, 192,0.2)
+}
+/* 80% {
+    box-shadow:0 0px 3px rgba(249,92,24,0.3),0 0 0 9px rgba(249,92,24,0),0 0 0 9px rgba(249,92,24,0.067)
+} */
+100% {
+    box-shadow:0 0px 3px rgba(192, 192, 192,0.3),0 0 0 12px rgba(192, 192, 192,0),0 0 0 15px rgba(192, 192, 192,0.0)
+}
+}
+
+
+@media screen and (max-width:767.98px){
+    .appointment{
+        display: none;
+    }
 }

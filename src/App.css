@@ -1,0 +1,43 @@
+/* ::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: rgb(248,248,248);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #00c6ff;  
+    background: -webkit-linear-gradient(to right, #0072ff, #00c6ff); 
+    background: linear-gradient(to right, #0072ff, #00c6ff); 
+    
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
+  } */
+
+  .my-button {
+    --background-image: linear-gradient(to right, #457fca 0%, #5691c8  51%, #457fca  100%);
+    background-image: linear-gradient(to right, #00c6ff 0%, #0072ff  51%, #00c6ff  100%);
+    padding: 8px 14px;
+    font-weight: 500;
+    text-align: center;
+    width: max-content;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 6px;
+    display: block;
+    cursor: pointer;
+  }
+
+  .my-button:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: rgb(245,245,245);
+    text-decoration: none;
+  }

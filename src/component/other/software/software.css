@@ -19,12 +19,16 @@
     flex-wrap: wrap;
 
 }
-.software .btnBox .btn{
+.software .btnBox .button{
     padding: 2px 12px;
     border-radius: 12px;
-    background-color: white;
-    color: #025;
-    box-shadow: 2px 2px 2px silver;
+    background: #1488CC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2B32B2, #1488CC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+     
+    --color: #025;
+    color: white;
+    box-shadow: 1px 1px 1px silver;
     font-size: 14px;
     font-weight: 500;
     font-family: DM Sans;

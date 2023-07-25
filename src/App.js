@@ -21,9 +21,10 @@ function App() {
       <Header aboutSection={aboutSection} serviceSection={serviceSection} projectSection={projectSection} welcomeSection={welcomeSection}/>
         <Routes> 
             <Route index element={<Home />}/>
+            <Route path='activity' element/>
             <Route path='project' element={<Project/>}/>
             
-            <Route path='service' element/> 
+            <Route path='step' element/> 
             <Route path='team' element={<Team/>}/> 
             <Route path='contact' element={<Contact/>}/>
         </Routes>

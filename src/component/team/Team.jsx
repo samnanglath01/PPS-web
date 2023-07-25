@@ -31,6 +31,7 @@ export default function Team(){
 
     ];
     
+    
     return(
         <div className="team container-fluid d-flex ">
             <h1 className="row title text-uppercase text-center">
