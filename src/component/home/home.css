@@ -15,7 +15,8 @@
          
 .my-button {
     --background-image: linear-gradient(to right, #457fca 0%, #5691c8  51%, #457fca  100%);
-    background-image: linear-gradient(to right, #00c6ff 0%, #0072ff  51%, #00c6ff  100%);
+    --background-image: linear-gradient(to right, #00c6ff 0%, #0072ff  51%, #00c6ff  100%);
+    background:blue;
     padding: 8px 14px;
     font-weight: 500;
     text-align: center;
@@ -72,7 +73,7 @@
 } 
 .home .section1 .contentDiv .title{
     z-index: 100;
-    font-size: 40px;
+    font-size: 54px;
     font-weight: 700;
     text-align: center;
     font-family: Space Grotesk;
@@ -130,7 +131,7 @@
     gap: 20px;
 }
 .home .section2 .contentDiv .title{
-    font-size: 38px;
+    font-size: 54px;
     font-weight: 700;
     text-transform: uppercase;
     font-family: Space Grotesk;
@@ -163,14 +164,24 @@
     background-color: #fff;
 }
 .home .section3 .titleDiv{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
     text-align: center;
+    
+}
+.home .section3 .titleDiv .text{
+    font-size: 17px;
+    font-weight: 600;
+    color: #025;
+    font-family: space Grotesk;
 }
 .home .section3 .titleDiv .title{
     color: #025;
     text-align: center;
     font-family: Space Grotesk;
     font-weight: 700;
-    font-size: 38px;
+    font-size: 54px;
     text-transform: uppercase;
 }
 .home .section3 .titleDiv .title span{
@@ -216,7 +227,7 @@
     box-sizing: border-box;
 }
 .home .section4 .contentDiv .titleDiv .title{
-    font-size: 38px;
+    font-size: 54px;
     color: #025;
     font-family: Space Grotesk;
     text-transform: uppercase;
@@ -294,7 +305,7 @@
     box-sizing: border-box;
 }
 .home .section6 .contentDiv .content .title{
-    font-size: 38px;
+    font-size: 54px;
     text-transform: uppercase;
     color: #025;
     font-family: Space Grotesk;
@@ -347,7 +358,7 @@
 }
 .home .section7 .titleDiv .title{
     color: #025;
-    font-size: 38px;
+    font-size: 54px;
     font-family: Space Grotesk;
     font-weight: 700;
 }
@@ -446,13 +457,13 @@
     align-items: center;
 }
 .home .section8 .titleDiv .title{
-    font-size:32px;
+    font-size:36px;
     font-weight: 600;
     font-family: Space Grotesk;
     color: #025;
 }
 .home .section8 .desDiv .description{
-    font-size:16px;
+    font-size:17px;
     font-weight: 500;
     font-family: DM Sans;
     color: #025;
@@ -494,6 +505,7 @@
     font-family: DM Sans;
     font-weight: 500;
     background-image: linear-gradient(to right, #457fca 0%, #5691c8  51%, #457fca  100%);
+    background:blue;
 }
 
 .home .section9{
@@ -505,6 +517,7 @@
     background: #00c6ff;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #00c6ff, #0072ff);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: blue;
     border-radius: 15px;
     display: flex;
     justify-content: center;
@@ -532,10 +545,11 @@
 .home .section9 .contentDiv .content .button{
 
     font-size: 16px;
-    color: white;
+    color: rgb(35, 113, 237);
     font-family: DM Sans;
     font-weight: 500;
-    background-image: linear-gradient(to right, #005C97 0%, #363795  51%, #005C97  100%);
+    background: white;
+    --background-image: linear-gradient(to right, #005C97 0%, #363795  51%, #005C97  100%);
     border-radius: 6px;
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.584);
 }

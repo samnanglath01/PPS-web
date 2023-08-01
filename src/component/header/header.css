@@ -89,6 +89,7 @@
     border-radius: 6px;
     font-size: 16px;
     color: #ffffff;
+    background: #0072ff;
 }
 .header .bar .menuDiv .menu .link.active::before{
     width: 100%;

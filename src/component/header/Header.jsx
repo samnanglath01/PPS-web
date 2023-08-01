@@ -1,17 +1,9 @@
-import React, { forwardRef, useState} from "react";
+import React, { useState} from "react";
 import 'bootstrap/dist/css/bootstrap.css';
 import './header.css';
 import {Link} from 'react-router-dom';
 
-const Header = forwardRef(function (props) {
-    // const scrollDown = (ref) => {
-
-    //     if(ref.current) window.scrollTo({
-    //         top: ref.current.offsetTop - 50,
-    //         behavior: 'smooth',
-            
-    //     });
-    // };
+const Header =()=>{
     const [active, setActive]=useState(1);
 
     const scrollToTop=()=>{
@@ -52,6 +44,6 @@ const Header = forwardRef(function (props) {
             </div>
         </div>
     )
-});
+};
 
 export default Header;

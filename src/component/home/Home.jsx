@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './home.css';
 import 'bootstrap/dist/css/bootstrap.css'
 import Service from '../other/service/Service';
@@ -10,14 +10,16 @@ import {Link} from 'react-router-dom';
 import 'aos/dist/aos.css';
 import $ from 'jquery';
 
-const Home = forwardRef(function (props) {
+const Home =()=> {
     const next=()=>{
         $('.section7').find('.contentDiv .pagination #btn-next').click();
     }
     useEffect(() => {
         Aos.init({ duration: 1500 });
         window.setInterval(next,5000);
-    }, []);
+
+
+    },[]);
     const [activeIndex, setActiveIndex] = useState(0);
      const handlePrevious=()=>{
         activeIndex === 0?
@@ -79,10 +81,11 @@ const Home = forwardRef(function (props) {
                     </div>
                 </div>
             </div>
-            <div className="section3 container-fluid" ref={props.aboutSection}>
+            <div className="section3 container-fluid">
                 <div className="titleDiv row">
+                    <p className='text text-center text-uppercase col-12'>un partenariat basé</p>
                     <h1 data-aos="fade-right" data-aos-duration="1000" className="title col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        ENSEMBLE NOUS <span>ÉVOLUONS</span>
+                        sur la <span className='text-uppercase'>confiance</span>
                     </h1>
                 </div>
                 <div data-aos="fade-up" className="partnerDiv row">
@@ -132,7 +135,7 @@ const Home = forwardRef(function (props) {
                     </div>
                 </div>
             </div>
-            <div className="section4 container-fluid d-flex" ref={props.projectSection}  id='Project'>
+            <div className="section4 container-fluid d-flex" id='Project'>
                 <div className="row contentDiv d-flex">
                     <div data-aos="fade-right" className="titleDiv">
                         <h1 className="title">
@@ -160,7 +163,7 @@ const Home = forwardRef(function (props) {
                 <div className="row btnBox">
                     <div className="col d-flex justify-content-center">
                         <Link to={'/project'} onClick={()=>{scrollToTop();}} className='btnPlus'>
-                            Plus de Project <i class="fa-solid fa-arrow-down fa-bounce"></i>
+                            Plus de Project <i className="fa-solid fa-arrow-down fa-bounce"></i>
                         </Link>
                     </div>
                 </div>
@@ -178,7 +181,7 @@ const Home = forwardRef(function (props) {
                     </div>
                 </div>
             </div>
-            <div className="section6 container-fluid d-flex " ref={props.serviceSection} id='Service'>
+            <div className="section6 container-fluid d-flex " id='Service'>
                 <div className="row contentDiv d-flex">
                     <div data-aos="fade-right"  className="col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 content">
                         <h1 className="title">
@@ -237,19 +240,19 @@ const Home = forwardRef(function (props) {
                         </p>
                     </div>
                     <div className="pagination d-flex justify-content-between align-item-center col-xxl-5 col-xl-5 col-lg-8 col-md-8 col-sm-10 col-10 p-0">
-                        <img src="./Assets/pre.svg" alt="" id='btn-pre' onClick={handlePrevious}/>
+                        <img src="./Assets/pre.svg" alt="" id='btn-pre' onClick={()=>{handlePrevious();}}/>
                         <div className='rule'>
                             {
 
                                 staff.map((st, index) => {
                                     return (
-                                        <div className={`r ${index === activeIndex ? 'active' : ''}`}></div>
+                                        <div key={index} className={`r ${index === activeIndex ? 'active' : ''}`}></div>
                                     );
                                 })
                             }
 
                         </div>
-                        <img src="./Assets/next.svg" alt="" id='btn-next' onClick={handleNext}/>
+                        <img src="./Assets/next.svg" alt="" id='btn-next' onClick={()=>{handleNext();}}/>
                     </div>
                 </div>
                 <div className="btnDiv row text-center">
@@ -271,7 +274,7 @@ const Home = forwardRef(function (props) {
                 </div>
                 <div className="emailDiv d-flex w-100 row">
                     <div className="emailBox col-xxl-10 col-xl-10 col-lg-9 col-md-9 col-sm-12 col-12">
-                        <i class="fa-solid fa-envelope"></i>
+                        <i className="fa-solid fa-envelope"></i>
                         <input type="email" name="" id="" className='email' placeholder='Entrez votre email' />
 
                     </div>
@@ -287,6 +290,7 @@ const Home = forwardRef(function (props) {
 
         </div>
     );
-})
+    
+}
 
 export default Home;

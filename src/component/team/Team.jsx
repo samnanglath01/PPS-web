@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Employee from './employee/Employee';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+
 export default function Team(){
     const [active,setActive]=useState("france");
     useEffect(() => {
@@ -57,7 +58,7 @@ export default function Team(){
                     employee.filter(emp=>emp.country===active).map((emp,i)=>{  
                         return(
                             <div data-aos="zoom-in" key={i} className="col-xxl-3 col-xl-4 col-lg-4 col-md-5 col-sm-6 col-8 empDiv">
-                                <Employee  img={emp.img} name={emp.name} pos={emp.pos}/>
+                                <Employee img={emp.img} name={emp.name} pos={emp.pos}/>
                             </div>
                         )                        
                     })

@@ -1,6 +1,7 @@
 .footer{
     width: 100%;
     background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(37,145,251,0.98) 0.1%, rgba(0,7,128,1) 99.8% );
+    background: blue;
     padding: 50px 12%;
 }
 .footer .content .title{
@@ -10,15 +11,21 @@
     font-family: Space Grotesk;
     padding: 20px 0;
 }
-.footer .content .menu p{
+.footer .content .menu{
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+.footer .content .menu .link{
     font-size: 14px;
     font-weight: 500;
     width: max-content;
     cursor: pointer;
     font-family: DM Sans;
     color: white;
+    text-decoration: none;
 }
-.footer .content .menu p:hover{
+.footer .content .menu .link:hover{
     color: rgb(165, 165, 165);
 
 }

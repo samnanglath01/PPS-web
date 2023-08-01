@@ -8,7 +8,7 @@
 .team .title{
     display: flex;
     justify-content: center;
-    font-size: 40px;
+    font-size: 56px;
     font-weight: 700;
     color: #025;
 
@@ -16,7 +16,7 @@
 .team .text{
     display: flex;
     justify-content: center;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 500;
     color: #025;
     
@@ -35,7 +35,7 @@
     width: 100%;
 }
 .team .location .country .name{
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 600;
     color: #025;
 }

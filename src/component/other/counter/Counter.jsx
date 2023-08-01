@@ -5,7 +5,7 @@ export default function Counter(props){
         <div className="counter">
             <h1 className="number">
                 {props.number}
-                <i class="fa-solid fa-plus" style={{color:`${props.color}`}}></i>
+                <i className="fa-solid fa-plus" style={{color:`${props.color}`}}></i>
             </h1>
             <div className="text">
                 {props.text}

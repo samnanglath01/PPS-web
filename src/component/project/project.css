@@ -2,6 +2,7 @@
     padding: 15px;
     margin-top: 50px;
     scroll-behavior: smooth;
+    box-sizing: border-box;
   }
   h1,h2,h3,h4,h5,h6{
     font-family: Space Grotesk;
@@ -25,14 +26,14 @@
   margin-bottom: 15px;
 }
 .project .section1 .titleDiv h1{
-  font-size: 44px;
+  font-size: 54px;
   font-weight: 600;
   color: #025;
   text-transform: uppercase;
   
 }
 .project .section1 .nameDiv .name{
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   color: #025;
 }
@@ -44,7 +45,7 @@
   margin-bottom: 15px;
 }
 .project .section2 .contentDiv .title{
-  font-size: 40px;
+  font-size: 54px;
   font-weight: 600;
   color: #025;
   text-transform: uppercase;
@@ -59,7 +60,7 @@
   flex-direction: column;
 }
 .project .section3 .contentDiv .title{
-  font-size: 40px;
+  font-size: 50px;
   font-weight: 600;
   color: #025;
   text-transform: uppercase;
@@ -152,7 +153,7 @@
   height: 30px;
 }
 .project .section6 .contentDiv .title{
-  font-size: 38px;
+  font-size: 50px;
   font-weight: 600;
   color: #025;
 }
@@ -183,7 +184,7 @@
   background: #00c6ff;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background: blue;
   display: flex;
   justify-content: center;
   border-radius: 20px;
@@ -195,7 +196,7 @@
   padding: 40px 8%;
 }
 .project .section9 .contentDiv .content .title{
-  font-size: 32px;
+  font-size: 38px;
   color: white;
   font-family: Space Grotesk;
   font-weight: 600;
@@ -211,11 +212,12 @@
 .project .section9 .contentDiv .content .button{
   width: max-content;
   font-size: 16px;
-  color: white;
+  color: rgb(0, 102, 255);
   font-family: DM Sans;
   font-weight: 500;
   background-image: linear-gradient(to right, #005C97 0%, #363795  51%, #005C97  100%);
   border-radius: 6px;
+  background: white;
   box-shadow: 0 0 5px rgba(255, 255, 255, 0.584);
   
 }

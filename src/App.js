@@ -8,6 +8,7 @@ import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import Contact from './component/contact/Contact';
 import Project from './component/project/Project';
 import Team from './component/team/Team';
+import Test from './Test/Test';
 
 function App() {
   const aboutSection = useRef(null);
@@ -23,7 +24,7 @@ function App() {
             <Route index element={<Home />}/>
             <Route path='activity' element/>
             <Route path='project' element={<Project/>}/>
-            
+            <Route path='test' element={<Test/>}/>
             <Route path='step' element/> 
             <Route path='team' element={<Team/>}/> 
             <Route path='contact' element={<Contact/>}/>
