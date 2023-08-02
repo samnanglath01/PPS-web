@@ -89,28 +89,28 @@ const Home =()=> {
                     </h1>
                 </div>
                 <div data-aos="fade-up" className="partnerDiv row">
-                    <div className='col-xxl-2 col-xl-3 col-lg-3 col-md-4 col-sm-5 col-6 partner'>
+                    <div className='col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-5 col-6 partner'>
                         <img src="./Assets/partner (1).png" alt="" />
                     </div>
-                    <div className='col-xxl-2 col-xl-3 col-lg-3 col-md-4 col-sm-5 col-6 partner'>
+                    <div className='col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-5 col-6 partner'>
                         <img src="./Assets/partner (2).png" alt="" />
                     </div>
-                    <div className='col-xxl-2 col-xl-3 col-lg-3 col-md-4 col-sm-5 col-6 partner'>
+                    <div className='col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-5 col-6 partner'>
                         <img src="./Assets/partner (3).png" alt="" />
                     </div>
-                    <div className='col-xxl-2 col-xl-3 col-lg-3 col-md-4 col-sm-5 col-6 partner'>
+                    <div className='col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-5 col-6 partner'>
                         <img src="./Assets/partner (4).png" alt="" />
                     </div>
-                    <div className='col-xxl-2 col-xl-3 col-lg-3 col-md-4 col-sm-5 col-6 partner'>
+                    <div className='col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-5 col-6 partner'>
                         <img src="./Assets/partner (5).png" alt="" />
                     </div>
-                    <div className='col-xxl-2 col-xl-3 col-lg-3 col-md-4 col-sm-5 col-6 partner'>
+                    <div className='col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-5 col-6 partner'>
                         <img src="./Assets/partner (6).png" alt="" />
                     </div>
-                    <div className='col-xxl-2 col-xl-3 col-lg-3 col-md-4 col-sm-5 col-6 partner'>
+                    <div className='col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-5 col-6 partner'>
                         <img src="./Assets/partner (7).png" alt="" />
                     </div>
-                    <div className='col-xxl-2 col-xl-3 col-lg-3 col-md-4 col-sm-5 col-6 partner'>
+                    <div className='col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-5 col-6 partner'>
                         <img src="./Assets/partner (8).png" alt="" />
                     </div>
 
@@ -273,17 +273,20 @@ const Home =()=> {
                     </div>
                 </div>
                 <div className="emailDiv d-flex w-100 row">
-                    <div className="emailBox col-xxl-10 col-xl-10 col-lg-9 col-md-9 col-sm-12 col-12">
-                        <i className="fa-solid fa-envelope"></i>
-                        <input type="email" name="" id="" className='email' placeholder='Entrez votre email' />
-
+                    <div className=" col-xxl-10 col-xl-10 col-lg-9 col-md-9 col-sm-12 col-12">
+                        <div className="emailBox">
+                            <i className="fa-solid fa-envelope"></i>
+                            <input type="email" name="" id="" className='email' placeholder='Entrez votre email' />
+                        </div>
+                        <p className='text'>Inscription instantanée. Aucune carte de crédit n'est requise. <a href="#12">Conditions d'utilisation</a> et <a href="#12">politique de confidentialité</a>.</p>
+                    
                     </div>
                     <div className="text-center btnBox col-xxl-2 col-xl-2 col-lg-3 col-md-3 col-sm-12 col-12 d-flex justify-content-center row-gap-3">
                         <div className="button my-button">
                             Envoyer
                         </div>
                     </div>
-                    <p style={{ fontSize: "12px", position: "absolute", left: 0, top: "118%" }} className="des w-100 mt-0">Inscription instantanée. Aucune carte de crédit n'est requise. <span style={{ color: "blue", cursor: "pointer" }}>Conditions d'utilisation</span> et <span style={{ color: "blue", cursor: "pointer" }}>politique de confidentialité</span>.</p>
+                    
                 </div>
 
             </div>

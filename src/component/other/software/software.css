@@ -22,10 +22,7 @@
 .software .btnBox .button{
     padding: 2px 12px;
     border-radius: 12px;
-    background: #1488CC;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2B32B2, #1488CC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-     background: white;
+    background: white;
     --color: #025;
     color: rgb(0, 0, 0);
     box-shadow: 1px 1px 1px silver;
@@ -53,4 +50,27 @@
     font-size: 24px;
     color: #025;
     font-weight: 600;
+}
+
+
+
+@media screen and (min-width:1400px) {
+    .software{
+        gap: 16px;   
+    }
+
+    .software .btnBox .button{
+        font-size: 17px;
+    }
+    .software .imgBox i{
+        bottom: 25px;
+        right: 25px;
+        width: 45px;
+        height: 45px;
+        padding: 15px;       
+    }
+    .software .name{
+        margin-top: 12px;
+        font-size: 28px;
+    }
 }

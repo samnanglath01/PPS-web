@@ -59,7 +59,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background-image: url(./../../../public/Assets/background_section1.png);
+    --background-image: url(./../../../public/Assets/background_section1.png);
     background-position: center;
     background-repeat:no-repeat;
     background-size:85% auto;
@@ -83,7 +83,6 @@
 }
 .home .section1 .contentDiv .title span{
     border-radius: 6px;
-    font-size: 40px;
     font-family: Space Grotesk;
     background: rgb(2,0,36);
     background: linear-gradient(90deg, #0025FF 0%, #F00 100%);
@@ -434,7 +433,7 @@
     height: 100%;
 }
 .home .section7 .contentDiv .pagination .rule .r.active{
-    background-image: linear-gradient( 288deg,  rgba(0,85,255,1) 1.5%, rgba(4,56,115,1) 91.6% );
+    background-color: #0025FF;
 }
 .home .section7 .btnDiv .button{
     padding: 10px 0;
@@ -463,15 +462,14 @@
     color: #025;
 }
 .home .section8 .desDiv .description{
-    font-size:17px;
+    font-size:16px;
     font-weight: 500;
     font-family: DM Sans;
     color: #025;
 }
 .home .section8 .emailDiv{
-    align-items: center;
     position: relative;
-    align-items: center;
+
 }
 .home .section8 .emailDiv .emailBox i{
     width: 5%;
@@ -498,6 +496,13 @@
     border: none;
     outline: none;
 
+}
+.home .section8 .emailDiv .text{
+    padding: 3px 0;
+    font-size: 13px;
+}
+.home .section8 .emailDiv .text a{
+    text-decoration: none;
 }
 .home .section8 .emailDiv .btnBox .button{
     padding: 8px 14px;
@@ -548,6 +553,7 @@
     color: rgb(35, 113, 237);
     font-family: DM Sans;
     font-weight: 500;
+    padding: 8px 14px;
     background: white;
     --background-image: linear-gradient(to right, #005C97 0%, #363795  51%, #005C97  100%);
     border-radius: 6px;
@@ -649,6 +655,10 @@
     .home .section2{
         padding: 60px 12% ;
     }
+    .home .section2 .contentDiv .title{
+        font-size: 32px;
+
+    }
     .home .section3 .titleDiv .title{
         font-size: 32px;
     }
@@ -670,6 +680,9 @@
     }
     .home .section5{
         padding: 40px 10%;
+    }
+    .home .section6 .contentDiv .content .title{
+        font-size: 32px;
     }
     .home .section7{
         padding: 50px 10%;
@@ -697,5 +710,163 @@
         
     } 
 
+}
+@media screen and (min-width:1400px) {
+    .home .section1{
+        margin-top: 80px !important;
+        padding: 100px 25% 100px 25%;
+        gap: 60px;
+
+    } 
+    
+    .home .section1 .contentDiv{
+        gap: 20px;
+    } 
+    .home .section1 .contentDiv .title{
+        font-size: 64px;
+    }
+    .home .section1 .contentDiv .description{
+        font-size: 20px;
+    }
+    .home .section1 .row .button{
+        font-size: 20px;
+    
+    }    
+    
+    .home .section2{
+        padding: 90px 20%;
+    } 
+    .home .section2 .contentDiv{
+        gap: 30px;
+    }
+    .home .section2 .contentDiv .title{
+        font-size: 64px;
+    } 
+    .home .section2 .contentDiv .description{
+        font-size: 20px;
+    }
+    .home .section3{
+        padding: 80px 20%;
+        gap: 60px;
+    }
+    .home .section3 .titleDiv{
+        row-gap: 20px;   
+    }
+    .home .section3 .titleDiv .text{
+        font-size: 20px;
+    }
+    .home .section3 .titleDiv .title{
+        font-size: 64px;
+    }
+
+    .home .section3 .partnerDiv{
+        row-gap: 30px;
+        
+    }
+    .home .section3 .partnerDiv .partner img{
+        height: 35px;
+    }
+
+    .home .section4{
+        padding: 90px 10%;
+        gap: 70px; 
+    }
+    .home .section4 .contentDiv{
+        row-gap: 35px;    
+        
+    }
+    .home .section4 .contentDiv .titleDiv .title{
+        font-size: 64px;
+        line-height: 150%;
+    }
+
+    .home .section4 .contentDiv .desDiv{
+        gap: 10px;
+
+    }
+    .home .section4 .contentDiv .desDiv .description{
+        font-size: 20px;    
+    }
+    .home .section4 .contentDiv .desDiv .button{
+        padding: 10px 16px;
+        font-size: 20px;
+    }
+    
+    .home .section4 .btnBox .btnPlus{
+        font-size:20px;
+    }
+
+
+    .home .section6{
+        padding: 90px 15%;
+        row-gap: 38px;
+    }
+
+    .home .section6 .contentDiv .content .title{
+        font-size: 64px;
+
+    }
+
+    .home .section6 .contentDiv .content .description{
+        font-size: 20px;
+
+    }
+
+    .home .section6 .contentDiv .btnDiv .button{
+        font-size: 20px;
+        padding: 10px 16px;
+    
+    }
+    .home .section7 .btnDiv .button{
+        font-size: 20px;
+
+    }
+
+    .home .section8{
+        width: 70%;
+        margin: 50px auto;
+        padding: 60px 10% 90px 10%;
+    }
+    .home .section8 .titleDiv .title{
+        font-size:38px;
+
+    }
+    .home .section8 .desDiv .description{
+        font-size:18px;
+    }
+
+    .home .section8 .emailDiv .emailBox{
+        padding: 6px 14px;
+        
+    }
+    .home .section8 .emailDiv .emailBox .email{
+        padding: 6px 12px;
+        font-size: 18px;
+    
+    }
+    .home .section8 .emailDiv .btnBox .button{
+        padding: 10px 16px;
+        background:blue;
+    }
+    
+    .home .section9 .contentDiv .content{
+        flex-direction: column;
+        row-gap: 10px;
+        padding: 40px 8%;
+    }
+    .home .section9 .contentDiv .content .title{
+        font-size: 38px;
+        
+    }
+    .home .section9 .contentDiv .content .description{    
+        font-size: 18px; 
+    }
+    .home .section9 .contentDiv .content .button{
+    
+        font-size: 18px;
+        padding: 10px 16px;
+
+    }
+    
 }
 

@@ -11,6 +11,7 @@
     border-radius: 6px;
     text-decoration: none;
     display: block;
+    height: max-content;
   }
 
   .my-button:hover {
@@ -24,7 +25,7 @@
     right: 0;
     z-index: 1000;
     position: fixed;
-    padding: 10px;
+    padding: 15px;
     background-color: #ffffff;
     box-sizing: border-box;
     box-shadow: 0 0 20px rgba(192, 192, 192, 0.662);
@@ -159,7 +160,25 @@
         display: flex;
     }
 }
+@media screen and (min-width:1400px) {
+    .header{
+        padding: 18px;
+  
+    }
+    .header .bar .logoDiv .logo{
+        height: 60px;
+    }
+    .header .bar .menuDiv .menu .link{
 
+        font-size: 20px;
+        padding: 8px 0;
+    }
+    .header .bar .menuDiv .btn-contact{
+        padding: 8px 16px;
+        font-size: 20px;
+
+    }
+}
 
 
 

@@ -44,3 +44,27 @@
     font-weight: 500;
     line-height: normal;
 }
+@media screen and (min-width:1400px) {
+    .myService{
+        height: 340px;
+    }
+    .myService .box1{
+        padding: 10px 10px;
+    }
+    .myService .box1 .icon{   
+        padding: 10 0px;
+        width: 60px;
+    }
+    .myService .box1 .number{
+        font-size: 72px;
+
+    }
+    .myService .title{
+
+        font-size: 30px;
+
+    }
+    .myService .description{
+        font-size: 18px;
+    }
+}
